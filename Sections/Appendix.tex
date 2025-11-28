@@ -1,0 +1,1171 @@
+\section*{Appendix}
+
+\addcontentsline{toc}{section}{Appendix}
+
+% Add in the appendices any material which supports this document, but does not “fit” naturally in the flow of your report’s narrative.
+
+\subsectiontoc{Appendix A: Thesis Timeline}
+Tests involving 15 mm and 75 mm vortex-generator arrays arranged in a staggered configuration were also performed during this thesis campaign. However, these have been excluded from the Gantt charts below, as they form part of UNSW student Shubhneet Sodhi’s undergraduate thesis.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/gantt_chart_1.pdf}
+    \caption{Term 1, 2025 Gantt Chart}
+    \label{fig:gantt_chart_1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/gantt_chart_2.pdf}
+    \caption{Term 1-2 Break, 2025 Gantt Chart}
+    \label{fig:gantt_chart_2}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/gantt_chart_3.pdf}
+    \caption{Term 2, 2025 Gantt Chart}
+    \label{fig:gantt_chart_3}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/gantt_chart_4.pdf}
+    \caption{Term 2-3 Break, 2025 Gantt Chart}
+    \label{fig:gantt_chart_4}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/gantt_chart_5.pdf}
+    \caption{Term 3, 2025 Gantt Chart}
+    \label{fig:gantt_chart_5}
+\end{figure}
+
+\newpage
+\subsectiontoc{Appendix B: Evidence of Training on Specific Equipment}
+The Health, Safety, and Environmental (HSE) quiz, required online courses, and in-person laboratory induction were all mandatory prerequisites for commencing experimental testing. Documentation confirming their completion can be found below.\vspace{2em}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Figures/Evidence of Aerodynamics Lab Induction.jpg}
+    \caption{Evidence of Aerodynamics Lab Induction}
+    \label{fig:aero_induction}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Figures/Evidence of MME HSE Orientation session and Quiz Completion.jpg}
+    \caption{Evidence of MME HSE Orientation Session and Quiz Completion}
+    \label{fig:mme_hse_completion}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Figures/Evidence of Hazardous Chemicals Course Completion.jpg}
+    \caption{Evidence of Hazardous Chemicals Course Completion}
+    \label{fig:hazchem_completion}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Figures/Evidence of Lab Health and Safety Course Completion.jpg}
+    \caption{Evidence of Lab Health \& Safety Course Completion}
+    \label{fig:lab_hs_completion}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Figures/Evidence of Safety@UNSW Course Completion.jpg}
+    \caption{Evidence of Safety@UNSW Course Completion}
+    \label{fig:safety_unsw_completion}
+\end{figure}
+
+
+\pagebreak
+\subsectiontoc{Appendix C: Methodology}
+\subsection*{Appendix C.1: CoolTerm Configuration Methodology}
+\begin{enumerate}[leftmargin=*]
+    \item Open \texttt{CoolTerm.exe}.
+    \item Select the \textbf{Options} icon.
+    \item Navigate to the \textbf{Serial Port} tab.
+    \item Change the port setting from \texttt{COM5} to \texttt{COM4}.
+    \item Open the \textbf{Receive} tab.
+    \item Enable the following check boxes:
+    \begin{enumerate}[leftmargin=*]
+        \item Add timestamps to received data
+        \item Wait for line ending
+    \end{enumerate}
+    \item Open the \textbf{File Capture} tab.
+    \item Enable the following check boxes:
+    \begin{enumerate}[leftmargin=*]
+        \item Add timestamps to captured data
+        \item Wait for termination string
+        \item Retain termination string
+    \end{enumerate}
+    \item Click \textbf{OK} to confirm settings.
+    \item Select the \textbf{Connect} icon to begin data acquisition. The temperature readings should now appear on the screen.
+    \item From the \textbf{Connection} menu in the menu bar, select \textbf{Capture to Text/Binary File} to save the data.
+    \item Choose a save location that is easily accessible to the user.
+    \item Upon completion of the test, click the \textbf{Disconnect} icon to stop recording thermocouple data.
+\end{enumerate}
+
+\newpage
+
+\subsection*{Appendix C.2: Effect of Vortex Generator Shape on Photovoltaic Module Temperature Reduction}
+\begin{table*}[htbp]
+\centering
+\footnotesize
+\caption{Mean $\Delta T$ values for each test case at 1, 2, and 3 m/s representing the different areas of interest on the photovoltaic module \cite{Chaudhury2024}.}
+\label{tab:mean_deltaT_areas}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccc}
+\toprule
+\multirow{2}{*}{\textbf{Test Case}} & \multirow{2}{*}{\textbf{Speed (m/s)}} & \multicolumn{3}{c}{\textbf{Area of Interest}} \\ 
+\cmidrule(lr){3-5}
+ &  & \textbf{Mean $\Delta T$ 2:7 (°C)} & \textbf{Mean $\Delta T$ 2:8 (°C)} & \textbf{Mean $\Delta T$ 2:9 (°C)} \\
+\midrule
+\multirow{3}{*}{Cube} & 1 & 1.176 & 1.409 & 1.593 \\
+                      & 2 & 1.453 & 1.731 & 1.967 \\
+                      & 3 & 1.592 & 1.882 & 2.073 \\
+\midrule
+\multirow{3}{*}{Cylindrical} & 1 & 0.944 & 1.174 & 1.392 \\
+                             & 2 & 1.787 & 2.099 & 2.321 \\
+                             & 3 & 2.364 & 2.680 & 2.886 \\
+\midrule
+\multirow{3}{*}{Pyramid} & 1 & 1.459 & 1.684 & 1.855 \\
+                         & 2 & 1.523 & 1.813 & 2.001 \\
+                         & 3 & 1.667 & 1.946 & 2.121 \\
+\midrule
+\multirow{3}{*}{Pyramid Inverted} & 1 & -2.856 & -2.569 & -2.344 \\
+                                  & 2 & -0.441 & -0.144 & 0.033 \\
+                                  & 3 & -0.196 & 0.051  & 0.172 \\
+\midrule
+\multirow{3}{*}{Winglet} & 1 & 4.796 & 5.123 & 5.340 \\
+                         & 2 & 2.683 & 2.967 & 3.083 \\
+                         & 3 & 1.842 & 2.076 & 2.208 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}
+
+
+
+\subsection*{Appendix C.3: Effect of Vortex Generator Spacing on Photovoltaic Module Temperature Reduction}
+\begin{table}[H]
+\centering
+\caption{Summary of stream-wise VG spacing test group parameters and calculation of $\Delta T$ for each case under wind-speed of 1, 2 and 3 m/s. Note the average $T_\text{mod,baseline}$ is calculated using the baseline correlation equations provided in previous section, it predicts the equivalent temperature of a baseline case under the same ambient temperature as the corresponding vortex generator case \cite{Zhou2024}.}
+\label{tab:streamwise_spacing_results}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{ccccccc}
+\toprule
+\textbf{$d_x$ (±1 mm)} & \textbf{$d_y$ (±1 mm)} & \textbf{Windspeed (±0.1 m/s)} & \textbf{Average $T_\text{mod,vg}$ (±2\% °C)} & \textbf{Average $T_\text{mod,baseline}$ (±2\% °C)} & \textbf{Mean $\Delta T$ (±2\% °C)} & \textbf{STD ($\sigma$)} \\
+\midrule
+\multirow{3}{*}{51} & \multirow{3}{*}{40}  & 1 & 50.29 & 50.11 & -0.18 & 0.11 \\
+                    &                      & 2 & 43.59 & 44.85 & 1.26  & 0.04 \\
+                    &                      & 3 & 40.76 & 42.84 & 2.09  & 0.10 \\ 
+\midrule
+\multirow{3}{*}{51} & \multirow{3}{*}{79}  & 1 & 48.67 & 49.98 & 1.31  & 0.10 \\
+                    &                      & 2 & 42.68 & 44.83 & 2.15  & 0.20 \\
+                    &                      & 3 & 39.97 & 42.48 & 2.51  & 0.10 \\ 
+\midrule
+\multirow{3}{*}{51} & \multirow{3}{*}{119} & 1 & 50.30 & 51.03 & 0.72  & 0.04 \\
+                    &                      & 2 & 45.10 & 46.27 & 1.17  & 0.03 \\
+                    &                      & 3 & 42.37 & 43.62 & 1.25  & 0.06 \\ 
+\midrule
+\multirow{3}{*}{51} & \multirow{3}{*}{158} & 1 & 52.04 & 51.46 & -0.58 & 0.04 \\
+                    &                      & 2 & 45.98 & 46.11 & 0.13  & 0.08 \\
+                    &                      & 3 & 43.32 & 43.79 & 0.47  & 0.04 \\ 
+\midrule
+\multirow{3}{*}{51} & \multirow{3}{*}{198} & 1 & 51.75 & 51.75 & 0.002 & 0.09 \\
+                    &                      & 2 & 46.67 & 46.33 & -0.34 & 0.03 \\
+                    &                      & 3 & 43.98 & 44.01 & 0.03  & 0.04 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\newpage
+
+\subsection*{Appendix C.4: Average Ambient Temperature Calculation MATLAB Program}
+\lstinputlisting[language=Matlab, caption={MATLAB script to calculate average ambient temperature from CoolTerm data}]{MATLAB/average_ambient_temperature_function.m}
+
+\newpage
+
+\subsection*{Appendix C.5: Dewarping.mlx}
+\lstinputlisting[language=Matlab, caption={Dewarping.mlx}]{MATLAB/dewarping.m}
+
+\newpage
+
+\subsection*{Appendix C.6: new\_deltaT\_multiple\_processing\_v2\_3.m}
+\lstinputlisting[language=Matlab, caption={\texttt{new\_deltaT\_multiple\_processing\_v2\_3.m}}]{MATLAB/newdeltaTmultipleprocessingv23.m}
+
+\newpage
+\subsection*{Appendix C.7: correlation\_multiple\_processing\_v2.m}
+\lstinputlisting[language=MATLAB, caption={\texttt{correlation\_multiple\_processing\_v2.m}}]{MATLAB/correlationmultipleprocessing.m}
+
+
+\newpage
+\subsectiontoc{Appendix D: Results and Discussion}
+\subsubsection*{Appendix D.1: Slope-intercept form for the baseline and 15 mm vortex generator lines of best fit}
+\begin{table}[H]
+    \centering
+    \caption{Slope-intercept form for the baseline and 15 mm vortex generator lines of best fit.}
+    \begin{tabularx}{\textwidth}{X X X X}
+        \toprule
+        \textbf{Baseline Trend line} & \textbf{Slope Intercept Form} & \textbf{VG Trend line} & \textbf{Slope Intercept Form} \\
+        \midrule
+        1 m/s Baseline Fit & $1.2442 \, \mathrm{T_{amb}} + 21.4243$ & 1 m/s VG Fit & $0.9366 \, \mathrm{T_{amb}} + 28.9258$ \\
+        2 m/s Baseline Fit & $1.3293 \, \mathrm{T_{amb}} + 13.4466$ & 2 m/s VG Fit & $0.90927 \, \mathrm{T_{amb}} + 23.3065$ \\
+        3 m/s Baseline Fit & $1.3052 \, \mathrm{T_{amb}} + 10.381$ & 3 m/s VG Fit & $0.94497 \, \mathrm{T_{amb}} + 19.1036$ \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:slope_intercept_form_baseline_h15_cases}
+\end{table}
+
+\subsubsection*{Appendix D.2: Experimental Results Summary}
+\begin{table}[H]
+    \centering
+    \caption{Summary of the height-based vortex generator array parameters and the calculation of $\Delta T$ for each case at wind speeds of 1 m/s, 2 m/s, and 3 m/s. Note: A positive $\Delta T$ value indicates cooling.}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|}\hline
+         \textbf{VG Height (mm)}& \textbf{Wind Speed ($\pm$ 0.1 m/s)} & \textbf{Average $T_{\text{mod,baseline}}$ ($^\circ \text{C}$)} & \textbf{Average $T_{\text{mod,vg}}$ ($^\circ \text{C}$)} & \textbf{$\Delta T$ ($^\circ \text{C}$)} & \textbf{$T_\mathrm{amb}$ ($^\circ \text{C}$)} \\\hline
+
+\multirow{3}{*}{15} 
+& 1 & 46.14 & 47.26 & -1.12 & 19.87 \\\cline{2-6}
+& 2 & 40.83 & 41.91 & -1.08 & 20.60 \\\cline{2-6}
+& 3 & 38.53 & 39.41 & -0.88 & 21.57 \\\hline
+
+\multirow{3}{*}{15} 
+& 1 & 48.09 & 49.16 & -1.07 & 21.43 \\\cline{2-6}
+& 2 & 42.65 & 43.42 & -0.78 & 21.97 \\\cline{2-6}
+& 3 & 39.96 & 40.66 & -0.69 & 22.67 \\\hline
+
+\multirow{3}{*}{15} 
+& 1 & 51.74 & 51.61 & 0.13 & 24.37 \\\cline{2-6}
+& 2 & 47.21 & 46.14 & 1.07 & 25.40 \\\cline{2-6}
+& 3 & 45.23 & 44.24 & 0.99 & 26.70 \\\hline
+
+\multirow{3}{*}{15} 
+& 1 & 53.15 & 52.79 & 0.36 & 25.50 \\\cline{2-6}
+& 2 & 47.74 & 46.95 & 0.79 & 25.80 \\\cline{2-6}
+& 3 & 44.53 & 43.93 & 0.60 & 26.17 \\\hline
+
+\multirow{3}{*}{15} 
+& 1 & 48.38 & 49.49 & -1.11 & 21.67 \\\cline{2-6}
+& 2 & 42.96 & 43.56 & -0.60 & 22.20 \\\cline{2-6}
+& 3 & 40.57 & 40.90 & -0.33 & 23.13 \\\hline
+
+\multirow{3}{*}{75} 
+& 1 & 49.13 & 50.54 & -1.41 & 22.27 \\\cline{2-6}
+& 2 & 44.15 & 45.58 & -1.43 & 23.10 \\\cline{2-6}
+& 3 & 41.88 & 43.18 & -1.30 & 24.13 \\\hline
+
+\multirow{3}{*}{75} 
+& 1 & 55.14 & 51.93 & 2.28 & 23.83 \\\cline{2-6}
+& 2 & 48.10 & 47.09 & -0.22 & 24.47 \\\cline{2-6}
+& 3 & 45.97 & 44.61 & -0.35 & 25.27 \\\hline
+
+\multirow{3}{*}{75} 
+& 1 & 52.45 & 52.86 & -0.86 & 27.10 \\\cline{2-6}
+& 2 & 47.56 & 48.31 & -1.12 & 26.07 \\\cline{2-6}
+& 3 & 45.06 & 46.32 & -1.26 & 27.27 \\\hline
+
+\multirow{3}{*}{75} 
+& 1 & 56.43 & 55.45 & 0.98 & 28.13 \\\cline{2-6}
+& 2 & 51.82 & 50.63 & 1.19 & 28.87 \\\cline{2-6}
+& 3 & 49.54 & 48.49 & 1.05 & 30.00 \\\hline
+
+\multirow{3}{*}{150} 
+& 1 & 51.55& 54.06& 2.52& 26.23\\\cline{2-6}
+& 2 & 47.56& 49.12& 1.56& 26.83\\\cline{2-6}
+& 3 & 45.42& 46.58& 1.15& 27.73\\\hline
+
+    \end{tabular}
+    }
+    \label{tab:results_summary}
+\end{table}
+
+
+\newpage
+\subsubsection*{Appendix D.3: Energy Balance Equation Derivation}
+A generalised energy balance states that the energy entering a system, minus the energy leaving the system, plus any energy generated within the system, is equal to the rate at which energy accumulates inside the system~\cite{engel2014IntroductionAndBasicConcepts}.
+\[
+    \mathrm{Energy\ in - Energy\ out + Energy\ generated = Energy\ accumulation}
+\]
+\[
+    \sum \dot{E}_\mathrm{in} - \sum \dot{E}_\mathrm{out} + \sum \dot{E}_\mathrm{gen} = \frac{dE_\mathrm{system}}{dt}
+\]
+For heat transfer, the primary form of energy entering or leaving a system is heat, $Q$, and it is generally assumed that there is no work done and no internal energy generation. Therefore, $E$ can be replaced by $Q$~\cite{engel2014IntroductionAndBasicConcepts}.
+\[
+    \sum \dot{Q}_\mathrm{in} - \sum \dot{Q}_\mathrm{out} = \frac{dE_\mathrm{system}}{dt}
+\]
+For a solid or fluid at rest, most of the energy in the system is internal energy, $U$. Therefore, kinetic and potential energies can be assumed negligible due to their small magnitudes. As a result, the total energy of the system, $E_\mathrm{system}$, can be represented by the internal energy, $U$~\cite{engel2014IntroductionAndBasicConcepts}.
+\[
+    \sum \dot{Q}_\mathrm{in} - \sum \dot{Q}_\mathrm{out} = \frac{dU}{dt}
+\]
+The net heat entering a system equals the rate of change of its internal energy. For a solid or lumped system, the change in internal energy can be expressed as the product of the system mass, $m$, the specific heat capacity at constant pressure, $c_p$, and the temperature change over the time interval. Therefore, the following energy balance can be expressed in terms of heat~\cite{engel2014IntroductionAndBasicConcepts}.
+\[
+    \sum \dot{Q}_\mathrm{in} - \sum \dot{Q}_\mathrm{out} = m c_p \frac{dT}{dt}
+\]
+As observed in the experimental rig (Figure \ref{fig:experimental_rig_diagram}), the photovoltaic module is heated by a power supply. Thus, the heat entering the system can be calculated by multiplying the solar irradiance simulated by the power supply by the surface area of the photovoltaic module. Heat leaves the system through convection from the top and bottom surfaces of the panel, radiation from the same surfaces, and conduction through the vortex generators that supports the solar panel and through the layers of the photovoltaic module itself ~\cite{engel2014IntroductionAndBasicConcepts}.
+\[
+    \mathrm{Solar\ Irradiance} \times A_s - \dot{Q}_\mathrm{conv,top} - \dot{Q}_\mathrm{conv,bottom} - \dot{Q}_\mathrm{rad,top} - 
+    \dot{Q}_\mathrm{rad,bottom} - 
+    \dot{Q}_\mathrm{cond,array} = m c_p \frac{dT}{dt}
+\]
+Substituting the convective and radiative heat-transfer expressions introduced in Section~2.3 yields the expanded governing heat-transfer equation~\cite{engel2014IntroductionAndBasicConcepts}. Under steady-state conditions, the transient (energy-storage) term on the right-hand side is equal to zero.
+\begin{align*}
+    \mathrm{Solar\ Irradiance} \times A_s 
+    &- h_\mathrm{conv,top}A_s(T_\mathrm{mod}-T_\mathrm{amb}) 
+    - h_\mathrm{conv,bottom}A_s(T_\mathrm{mod}-T_\mathrm{amb}) \nonumber\\
+    &- \varepsilon_\mathrm{rad,top} \sigma A_s(T_\mathrm{mod}^4-T_\mathrm{amb}^4)
+    - \varepsilon_\mathrm{rad,bottom} \sigma A_s(T_\mathrm{mod}^4-T_\mathrm{amb}^4) 
+    - \dot{Q}_\mathrm{cond,array}
+    = 0
+\end{align*}
+
+\newpage
+\subsubsection*{Appendix D.4: Derivation of Total Heat Lost to the Environment for the Baseline Case (19.9 $^\circ$C) or (293.05 K)}
+The relevant parameters for this calculation are the surface area of the photovoltaic module, $A_s = 1.6633~\mathrm{m^2}$, the module temperature, $T_{\mathrm{mod}} = 319.33~\mathrm{K}$, and the ambient temperature, $T_{\mathrm{amb}} = 293.05~\mathrm{K}$.
+
+\textbf{Convective Heat Transfer Coefficient}\par
+To determine the convective heat transfer from both the top and bottom surfaces of the photovoltaic module, the convective heat transfer coefficient, $h_\mathrm{conv}$, was first evaluated. Accordingly, the module was modelled as an inclined external flat plate, as shown in Figure~\ref{fig:inclined_plate}~\cite{engel2014NaturalConvection}. Based on the experimental rig, the characteristic length was taken as $L_\mathrm{c} = 1.665~\mathrm{m}$, and the module inclination angle was $\theta = 45^\circ$. Since the working fluid was air, the following thermophysical properties were used: the kinematic viscosity $\nu = 1.506\times10^{-5}\ \mathrm{m^2/s}$~\cite{OmniCalculator_KinematicViscosityAir}, Prandtl number $\mathrm{Pr} = 0.707$~\cite{EngineeringToolbox_AirPrandtlNumber_2018}, and thermal conductivity $k_\mathrm{air} = 0.0259\ \mathrm{W/mK}$~\cite{Neutrium_PropertiesOfAir_2012}. In addition, the gravitational acceleration was taken as $g = 9.81~\mathrm{m/s^2}$~\cite{NASA_GRC_WeightAndMass}, and the free-stream velocity was $V = 1~\mathrm{m/s}$.
+
+Before computing $h_\mathrm{conv}$, it is necessary to establish the relative contributions of free and forced convection, as this dictates the appropriate Nusselt number formulation. The dominance of each mechanism can be assessed using the ratio
+\[
+    \frac{\mathrm{Gr_L}}{\mathrm{Re_L^2}},
+\]
+where $\mathrm{Gr_L}$ is the Grashof number and $\mathrm{Re_L}$ is the Reynolds number for the photovoltaic module. A value significantly greater than unity indicates free convection dominance, a value significantly less than unity indicates forced convection dominance, and values on the order of unity imply mixed convection~\cite{engel2014NaturalConvection}.
+
+To compute the Grashof number, the thermal expansion coefficient of air, $\beta$, must first be obtained. For ideal gases, $\beta$ is approximated as the inverse of the film temperature, $T_f$, defined as the average of the photovoltaic module surface temperature, $T_\mathrm{mod}$, and the ambient air temperature, $T_\mathrm{amb}$~\cite{engel2014NaturalConvection}:
+\[
+    T_f = \frac{T_\mathrm{mod} + T_\mathrm{amb}}{2} = 306.19\ \mathrm{K}.
+\]
+Therefore,
+\[
+    \beta = \frac{1}{T_f} = 0.0033\ \mathrm{K^{-1}}.
+\]
+With the film temperature and fluid properties known, the Grashof number is calculated as~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Gr_L} = \frac{g\beta \sin{\theta} (T_\mathrm{mod} - T_\mathrm{amb})L_\mathrm{c}^3}{\nu^2} = 1.21\times10^{10}.
+\]
+The Reynolds number is given by~\cite{engel2014FundamentalsOfConvection}:
+\[
+    \mathrm{Re_L} = \frac{V L_\mathrm{c}}{\nu} = 110,557.77.
+\]
+
+The resulting ratio is:
+\[
+    \frac{\mathrm{Gr_L}}{\mathrm{Re_L^2}} = 0.99 \approx 1,
+\]
+indicating that buoyancy and forced flow contribute comparably to the heat-transfer process. Consequently, a mixed-convection formulation is required~\cite{engel2014NaturalConvection}.
+
+The free-convection contribution is represented using the Rayleigh number, $\mathrm{Ra_L}$, defined as ~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Ra_L} = \mathrm{Gr_L}\,\mathrm{Pr} = 8.57 \times 10^{9}.
+\]
+For external flow over a flat plate, the forced-convection Nusselt number is expressed as~\cite{engel2014ExternalForcedConvection}:
+\[
+    \mathrm{Nu_{forced}} = 0.664\,\mathrm{Re_L}^{1/2}\mathrm{Pr}^{1/2} = 185.64.
+\]
+Similarly, the free-convection Nusselt number is given by~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Nu_{free}} =
+    \left(0.825 + \frac{0.387\,\mathrm{Ra_L}^{1/6}}{[1+(0.492/\mathrm{Pr})^{9/16}]^{8/27}}\right)^2
+    = 240.10.
+\]
+The mixed-convection Nusselt number, $\mathrm{Nu_{mix}}$, combines both contributions using~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Nu_{mix}} = (\mathrm{Nu_{forced}^3} + \mathrm{Nu_{free}^3})^{1/3} = 272.52.
+\]
+Finally, the mixed-convection Nusselt number, along with the previously stated fluid properties, is used to determine the convective heat transfer coefficient:
+\[
+    h_\mathrm{conv} = h_\mathrm{conv,top} = h_\mathrm{conv,bottom} =
+    \frac{\mathrm{Nu_{mix}}\,k_\mathrm{air}}{L_\mathrm{c}} = 4.24\ \mathrm{W\ m^{-2}\ K^{-1}}.
+\]
+It is important to note that, for the baseline case, the top and bottom surfaces of the photovoltaic module share identical geometry. Consequently, the same convective heat transfer coefficient, $h_\mathrm{conv}$, can be applied to both surfaces. This is not the case for configurations involving vortex generators, as their presence on the underside of the module alters the geometry. As a result, the convective heat transfer coefficient for the top surface differs from that of the bottom surface in the vortex generator cases.
+
+\textbf{Convective Heat Transfer at the Top Surface of the Photovoltaic Module}\par
+The convective heat transfer rate from the top surface of the photovoltaic module is calculated using the convective heat transfer coefficient, the exposed surface area, and the temperature difference between the module and the ambient air~\cite{engel2014IntroductionAndBasicConcepts}:
+\[
+    \dot{Q}_\mathrm{conv,top}=h_\mathrm{conv,top}A_s(T_\mathrm{mod}-T_\mathrm{amb})=185.31\ \mathrm{W}
+\]
+\textbf{Convective Heat Transfer at the Bottom Surface of the Photovoltaic Module}\par
+Similarly, the convective heat transfer rate from the underside of the module is determined using the variables~\cite{engel2014IntroductionAndBasicConcepts}:
+\[
+    \dot{Q}_\mathrm{conv,bottom}=h_\mathrm{conv,bottom}A_s(T_\mathrm{mod}-T_\mathrm{amb})=185.31\ \mathrm{W}
+\]
+\textbf{Radiative Heat Transfer at the Top Surface of the Photovoltaic Module}\par
+The top surface of the photovoltaic module consists of a glass layer. Consequently, an emissivity of $\varepsilon_\mathrm{rad,top} = 0.88$ was applied, consistent with the value reported by Notton et al.\ (2014)~\cite{Notton_Motte_Cristofari_Canaletti_2014}. The radiative heat transfer rate from the top surface is then calculated~\cite{engel2014IntroductionAndBasicConcepts}:
+\[
+    \dot{Q}_\mathrm{rad,top} = \varepsilon_\mathrm{rad,top} \sigma A_s (T_\mathrm{mod}^4-T_\mathrm{amb}^4)=250.90\ \mathrm{W}
+\]
+\textbf{Radiative Heat Transfer at the Bottom Surface of the Photovoltaic Module}\par
+The underside of the photovoltaic module is constructed from acrylic; therefore, an emissivity of $\varepsilon_\mathrm{rad,bottom} = 0.85$ was adopted, consistent with the value reported by Belliveau et al.\ (2019)~\cite{belliveau2019midinfrared}. The radiative heat transfer rate from the bottom surface is computed as~\cite{engel2014IntroductionAndBasicConcepts}:
+\[
+    \dot{Q}_\mathrm{rad,bottom} = \varepsilon_\mathrm{rad,bottom} \sigma A_s (T_\mathrm{mod}^4-T_\mathrm{amb}^4)=242.35\ \mathrm{W}
+\]
+\textbf{Conductive Heat Transfer via Vortex Generator Array}\par
+The baseline case does not include a vortex generator attached to the underside of the panel. Consequently, the conductive heat-transfer term associated with the vortex generator array is zero for the baseline configuration.
+
+\textbf{Total Heat Lost to the Environment}\par
+The total heat loss from the photovoltaic module to the surrounding environment is obtained by summing the convective and radiative heat transfer contributions from both the top and bottom surfaces:
+\[
+    \therefore\ \dot{Q}_\mathrm{loss} = \dot{Q}_\mathrm{conv,top} + \dot{Q}_\mathrm{conv,bottom} + \dot{Q}_\mathrm{rad,top} + \dot{Q}_\mathrm{rad,bottom} = 863.86\ \mathrm{W}
+\]
+
+
+\newpage
+\subsubsection*{Appendix D.5: Derivation of Total Heat Lost to the Environment for the 15 mm Vortex Generator Case (19.9 $^\circ$C) or (293.05 K)}\par
+The relevant parameters for this calculation are the surface area of the photovoltaic module, $A_s = 1.6633~\mathrm{m^2}$, the module temperature, $T_{\mathrm{mod}} = 320.4~\mathrm{K}$, and the ambient temperature, $T_{\mathrm{amb}} = 293.05~\mathrm{K}$.
+
+\textbf{Convective Heat Transfer at the Top Surface of the Photovoltaic Module}\par
+To determine the convective heat transfer from the top surface of the photovoltaic module, the convective heat transfer coefficient, $h_\mathrm{conv,top}$, was first evaluated. Accordingly, the module was modelled as an inclined external flat plate, as shown in Figure~\ref{fig:inclined_plate}~\cite{engel2014NaturalConvection}. Based on the experimental rig, the characteristic length was taken as $L_\mathrm{c} = 1.665~\mathrm{m}$, and the module inclination angle was $\theta = 45^\circ$. Since the working fluid was air, the following thermophysical properties were used: the kinematic viscosity $\nu = 1.506\times10^{-5}\ \mathrm{m^2/s}$~\cite{OmniCalculator_KinematicViscosityAir}, Prandtl number $\mathrm{Pr} = 0.707$~\cite{EngineeringToolbox_AirPrandtlNumber_2018}, and thermal conductivity $k_\mathrm{air} = 0.0259\ \mathrm{W/mK}$~\cite{Neutrium_PropertiesOfAir_2012}. In addition, the gravitational acceleration was taken as $g = 9.81~\mathrm{m/s^2}$~\cite{NASA_GRC_WeightAndMass}, and the free-stream velocity was $V = 1~\mathrm{m/s}$.
+
+Before computing $h_\mathrm{conv,top}$, it is necessary to establish the relative contributions of free and forced convection, as this dictates the appropriate Nusselt number formulation. The dominance of each mechanism can be assessed using the ratio
+\[
+    \frac{\mathrm{Gr_L}}{\mathrm{Re_L^2}},
+\]
+where $\mathrm{Gr_L}$ is the Grashof number and $\mathrm{Re_L}$ is the Reynolds number for the photovoltaic module. A value significantly greater than unity indicates free convection dominance, a value significantly less than unity indicates forced convection dominance, and values on the order of unity imply mixed convection~\cite{engel2014NaturalConvection}.
+
+To compute the Grashof number, the thermal expansion coefficient of air, $\beta$, must first be obtained. For ideal gases, $\beta$ is approximated as the inverse of the film temperature, $T_f$, defined as the average of the photovoltaic module surface temperature, $T_\mathrm{mod}$, and the ambient air temperature, $T_\mathrm{amb}$~\cite{engel2014NaturalConvection}:
+\[
+    T_f = \frac{T_\mathrm{mod} + T_\mathrm{amb}}{2} = 306.73\ \mathrm{K}.
+\]
+Therefore,
+\[
+    \beta = \frac{1}{T_f} = 0.0033\ \mathrm{K^{-1}}.
+\]
+With the film temperature and fluid properties known, the Grashof number is calculated as~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Gr_L} = \frac{g\beta \sin{\theta} (T_\mathrm{mod} - T_\mathrm{amb})L_\mathrm{c}^3}{\nu^2} = 1.26\times10^{10}.
+\]
+The Reynolds number is given by~\cite{engel2014FundamentalsOfConvection}:
+\[
+    \mathrm{Re_L} = \frac{V L_\mathrm{c}}{\nu} = 110,557.77.
+\]
+The resulting ratio is:
+\[
+    \frac{\mathrm{Gr_L}}{\mathrm{Re_L^2}} = 1.03 \approx 1,
+\]
+indicating that buoyancy and forced flow contribute comparably to the heat-transfer process. Consequently, a mixed-convection formulation is required~\cite{engel2014NaturalConvection}.
+
+The free-convection contribution is represented using the Rayleigh number, $\mathrm{Ra_L}$, defined as ~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Ra_L} = \mathrm{Gr_L}\,\mathrm{Pr} = 8.90 \times 10^{9}.
+\]
+For external flow over a flat plate, the forced-convection Nusselt number is expressed as~\cite{engel2014ExternalForcedConvection}:
+\[
+    \mathrm{Nu_{forced}} = 0.664\,\mathrm{Re_L}^{1/2}\mathrm{Pr}^{1/2} = 185.64.
+\]
+Similarly, the free-convection Nusselt number is given by~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Nu_{free}} =
+    \left(0.825 + \frac{0.387\,\mathrm{Ra_L}^{1/6}}{[1+(0.492/\mathrm{Pr})^{9/16}]^{8/27}}\right)^2
+    = 243.01.
+\]
+The mixed-convection Nusselt number, $\mathrm{Nu_{mix}}$, combines both contributions using~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Nu_{mix}} = (\mathrm{Nu_{forced}^3} + \mathrm{Nu_{free}^3})^{1/3} = 274.79.
+\]
+Finally, the mixed-convection Nusselt number, along with the previously stated fluid properties, is used to determine the convective heat transfer coefficient:
+\[
+    h_\mathrm{conv,top} =
+    \frac{\mathrm{Nu_{mix}}\,k_\mathrm{air}}{L_\mathrm{c}} = 4.27\ \mathrm{W\ m^{-2}\ K^{-1}}.
+\]
+Thus, the convective heat transfer rate from the top surface of the photovoltaic module can be determined~\cite{engel2014IntroductionAndBasicConcepts}:
+\[
+    \dot{Q}_\mathrm{conv,top}=h_\mathrm{conv,top}A_s(T_\mathrm{mod}-T_\mathrm{amb})=194.46\ \mathrm{W}
+\]
+\textbf{Radiative Heat Transfer at the Top Surface of the Photovoltaic Module}\par
+The top surface of the photovoltaic module consists of a glass layer. Consequently, an emissivity of $\varepsilon_\mathrm{rad,top} = 0.88$ was applied, consistent with the value reported by Notton et al.\ (2014) \cite{Notton_Motte_Cristofari_Canaletti_2014}.
+\[
+    \dot{Q}_\mathrm{rad,top} = \varepsilon_\mathrm{rad,top} \sigma A_s (T_\mathrm{mod}^4-T_\mathrm{amb}^4)=262.53\ \mathrm{W}
+\]
+\textbf{Radiative Heat Transfer at the Bottom Surface of the Photovoltaic Module}\par
+The underside of the photovoltaic module is made of acrylic; therefore, an emissivity of $\varepsilon_\mathrm{rad,bottom} = 0.85$ was adopted, consistent with the value reported by Belliveau et al.\ (2019) \cite{belliveau2019midinfrared}.
+\[
+    \dot{Q}_\mathrm{rad,bottom} = \varepsilon_\mathrm{rad,bottom} \sigma A_s (T_\mathrm{mod}^4-T_\mathrm{amb}^4)=246.11\ \mathrm{W}
+\]
+\textbf{Conductive Heat Transfer via the Attached Vortex Generator Array}\par
+Conductive heat transfer from the photovoltaic module to the attached vortex generator array is calculated by modelling the array as a finned heat sink \cite{engel2014SteadyHeatConduction}. Thus, in the following derivation, the terms fin and vortex generator are used interchangeably.
+
+Furthermore, to determine whether the fin tip should be modelled as adiabatic or convective, the ratio of the tip area, $A_\mathrm{tip}$, to the lateral area, $A_\mathrm{lat}$, of the vortex generator should be assessed. If this ratio is sufficiently large, indicating that heat loss through the tip is non-negligible, a convective boundary condition at the tip should be applied rather than assuming an adiabatic tip \cite{incropera2011fundamentals}.
+\[
+    \frac{A_\mathrm{tip}}{A_\mathrm{lat}}=\frac{\pi r^2}{2\pi rL}=0.33
+\]
+Given that the tip area is approximately 33\% of the lateral area, heat loss through the tip is not negligible, and the tip cannot be treated as adiabatic.
+
+The geometric properties of the fin, namely the cross-sectional area $A_c$ and perimeter, $P$, can be determined.
+\[
+    A_c=\pi r^2 = 0.00031\ \mathrm{m^2}
+\]
+\[
+    P=2\pi r = 0.063\ \mathrm{m^2}
+\]
+In addition, the excess temperature at the fin base relative to the ambient air, $\theta_b$, is calculated using the experimentally obtained values \cite{deSilva2024conduction3}. It is noted that the fin-base temperature is taken to be the photovoltaic module temperature, as the vortex generator array is attached directly to the underside of the module.
+\[
+    \theta_b=T_\mathrm{base}-T_\mathrm{amb}=27.35\ \mathrm{K}
+\]
+To compute the fin parameter $m$, the convective heat-transfer coefficient for a single cylindrical vortex generator in cross-flow, $h_\mathrm{cyl}$, must first be determined. This requires evaluating the Reynolds number, $\mathrm{Re_D}$ \cite{engel2014ExternalForcedConvection}.
+\[
+    \mathrm{Re_D} = \frac{VD}{\nu}=1328.02
+\]
+ This value is then used to obtain the corresponding Nusselt number, $\mathrm{Nu_\mathrm{cyl}}$, using the Churchill–Bernstein correlation \cite{engel2014ExternalForcedConvection}.
+\[
+\mathrm{Nu}_{\mathrm{cyl}} = 0.3
++ \frac{0.62\,\mathrm{Re_D}^{\tfrac{1}{2}}\mathrm{Pr}^{\tfrac{1}{3}}}
+       {\left(1 + \tfrac{0.4}{\mathrm{Pr}^{\tfrac{2}{3}}}\right)^{\tfrac{1}{4}}}
+\left(1 + \left(\tfrac{\mathrm{Re_D}}{282{,}000}\right)^{\tfrac{5}{8}}\right)^{\tfrac{4}{5}}=18.46
+\]
+Finally, the Nusselt number can be related to the thermal conductivity, $k_\mathrm{air}$, to evaluate the convective heat transfer coefficient for a single cylindrical vortex generator in cross-flow, $h_\mathrm{cyl}$ \cite{engel2014ExternalForcedConvection}.
+\[
+    h_\mathrm{cyl}=\frac{\mathrm{Nu_{cyl}}k_\mathrm{air}}{L_\mathrm{c}}=23.91 \ \mathrm{W\ m^{-2}\ K^{-1}}
+\]
+Thus, together with the thermal conductivity of PLA, $k_\mathrm{PLA} = 0.13\ \mathrm{W/mK}$ \cite{ISLAM2023105979}, the fin parameter, $m_\mathrm{fin}$, can be evaluated \cite{deSilva2024conduction3}.
+\[
+    m_\mathrm{fin} = \sqrt{\frac{h_\mathrm{cyl} P}{k_\mathrm{PLA} A_c}} = 191.80.
+\]
+The fin conduction parameter $M_\mathrm{fin}$ can also be determined using the previously evaluated convective heat-transfer coefficient for a single vortex generator, $h_\mathrm{cyl}$, together with the experimentally determined properties and the relevant geometric characteristics of the vortex generator \cite{deSilva2024conduction3}.
+\[
+    M_\mathrm{fin}=\sqrt{h_\mathrm{cyl}Pk_\mathrm{PLA}A_c}\theta_b=0.21
+\]
+Finally, the convective-tip boundary condition is applied to obtain the total heat removed by a single fin \cite{deSilva2024conduction3}.
+\[
+    \dot{Q}_\mathrm{cond,vg}=M_\mathrm{fin}\frac{\sinh{m_\mathrm{fin}L}+(\frac{h_\mathrm{cyl}}{m_\mathrm{fin}k_\mathrm{PLA}})\cosh{m_\mathrm{fin}L}}{\cosh{m_\mathrm{fin}L}+(\frac{h_\mathrm{cyl}}{m_\mathrm{fin}k_\mathrm{PLA}})\sinh{m_\mathrm{fin}L}}=0.21\ \mathrm{W}
+\]
+The presence of the vortex generator array necessitates multiplying the heat removed by a single fin by $N = 156$, corresponding to the total number of vortex generators in the array.
+\[
+    \dot{Q}_\mathrm{cond,array}=N\dot{Q}_\mathrm{cond,vg}=33.42\ \mathrm{W}
+\]
+\textbf{Convective Heat Transfer at the Bottom Surface of the Photovoltaic Module}\par
+The presence of the vortex generator array on the underside of the photovoltaic module complicates the formulation of the convective heat-transfer coefficient at the bottom surface, $h_\mathrm{conv,bottom}$. Consequently, the corresponding baseline energy balance equation was employed to determine both the convective heat transfer and the associated convective heat-transfer coefficient at the bottom surface of the module.
+
+As determined in Appendix~D.4, the total heat lost to the environment for the baseline case at an ambient temperature of 19.9~$^\circ$C was calculated to be 863.86~W. Owing to the fundamental principle of the energy balance, the heat entering the system must therefore also be 863.86~W at steady state. Consequently, a heat input of 863.86~W is used for the corresponding vortex generator case in the energy balance equation, as shown below.
+\[
+    863.86\ \mathrm{W} = \dot{Q}_\mathrm{conv,top} + \dot{Q}_\mathrm{conv,bottom} +\dot{Q}_\mathrm{rad,top}+\dot{Q}_\mathrm{rad,bottom}+\dot{Q}_\mathrm{cond,array}
+\]
+Given that all other terms in the expression are known, the equation can be rearranged to solve for the convective heat transfer at the bottom surface of the photovoltaic module.
+\[
+    \dot{Q}_\mathrm{conv,bottom} = 863.86 - \dot{Q}_\mathrm{conv,top} - \dot{Q}_\mathrm{rad,top}-\dot{Q}_\mathrm{rad,bottom}-\dot{Q}_\mathrm{cond,array}=127.36\ \mathrm{W}
+\]
+Furthermore, the generalised expression for convective heat transfer, given by Newton's law of cooling~\cite{engel2014IntroductionAndBasicConcepts}, can be applied together with the recorded module and ambient temperatures and the specified bottom surface area to determine the convective heat transfer coefficient at the underside of the photovoltaic module.
+\[
+    h_\mathrm{conv,bottom}=\frac{T_\mathrm{mod}-T_\mathrm{amb}}{A_\mathrm{s}}=2.80\ \mathrm{W\ m^{-2}\ K^{-1}}
+\]
+
+\newpage
+\subsubsection*{Appendix D.6: Derivation of Total Heat Lost to the Environment for the Baseline Case (25.5 $^\circ$C) or (298.65 K)}\par
+The relevant parameters for this calculation are the surface area of the photovoltaic module, $A_s = 1.6633~\mathrm{m^2}$, the module temperature, $T_{\mathrm{mod}} = 326.3~\mathrm{K}$, and the ambient temperature, $T_{\mathrm{amb}} = 298.65~\mathrm{K}$.
+
+\textbf{Convective Heat Transfer Coefficient}\par
+To determine the convective heat transfer from both the top and bottom surfaces of the photovoltaic module, the convective heat transfer coefficient, $h_\mathrm{conv}$, was first evaluated. Accordingly, the module was modelled as an inclined external flat plate, as shown in Figure~\ref{fig:inclined_plate}~\cite{engel2014NaturalConvection}. Based on the experimental rig, the characteristic length was taken as $L_\mathrm{c} = 1.665~\mathrm{m}$, and the module inclination angle was $\theta = 45^\circ$. Since the working fluid was air, the following thermophysical properties were used: the kinematic viscosity $\nu = 1.506\times10^{-5}\ \mathrm{m^2/s}$~\cite{OmniCalculator_KinematicViscosityAir}, Prandtl number $\mathrm{Pr} = 0.707$~\cite{EngineeringToolbox_AirPrandtlNumber_2018}, and thermal conductivity $k_\mathrm{air} = 0.0259\ \mathrm{W/mK}$~\cite{Neutrium_PropertiesOfAir_2012}. In addition, the gravitational acceleration was taken as $g = 9.81~\mathrm{m/s^2}$~\cite{NASA_GRC_WeightAndMass}, and the free-stream velocity was $V = 1~\mathrm{m/s}$.
+
+Before computing $h_\mathrm{conv}$, it is necessary to establish the relative contributions of free and forced convection, as this dictates the appropriate Nusselt number formulation. The dominance of each mechanism can be assessed using the ratio
+\[
+    \frac{\mathrm{Gr_L}}{\mathrm{Re_L^2}},
+\]
+where $\mathrm{Gr_L}$ is the Grashof number and $\mathrm{Re_L}$ is the Reynolds number for the photovoltaic module. A value significantly greater than unity indicates free convection dominance, a value significantly less than unity indicates forced convection dominance, and values on the order of unity imply mixed convection~\cite{engel2014NaturalConvection}.
+
+To compute the Grashof number, the thermal expansion coefficient of air, $\beta$, must first be obtained. For ideal gases, $\beta$ is approximated as the inverse of the film temperature, $T_f$, defined as the average of the photovoltaic module surface temperature, $T_\mathrm{mod}$, and the ambient air temperature, $T_\mathrm{amb}$~\cite{engel2014NaturalConvection}:
+\[
+    T_f = \frac{T_\mathrm{mod} + T_\mathrm{amb}}{2} = 312.48\ \mathrm{K}.
+\]
+Therefore,
+\[
+    \beta = \frac{1}{T_f} = 0.0032\ \mathrm{K^{-1}}.
+\]
+With the film temperature and fluid properties known, the Grashof number is calculated as~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Gr_L} = \frac{g\beta \sin{\theta} (T_\mathrm{mod} - T_\mathrm{amb})L_\mathrm{c}^3}{\nu^2} = 1.25\times10^{10}.
+\]
+The Reynolds number is given by~\cite{engel2014FundamentalsOfConvection}:
+\[
+    \mathrm{Re_L} = \frac{V L_\mathrm{c}}{\nu} = 110,557.77.
+\]
+The resulting ratio is:
+\[
+    \frac{\mathrm{Gr_L}}{\mathrm{Re_L^2}} = 1.02 \approx 1,
+\]
+indicating that buoyancy and forced flow contribute comparably to the heat-transfer process. Consequently, a mixed-convection formulation is required~\cite{engel2014NaturalConvection}.
+
+The free-convection contribution is represented using the Rayleigh number, $\mathrm{Ra_L}$, defined as ~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Ra_L} = \mathrm{Gr_L}\,\mathrm{Pr} = 8.83 \times 10^{9}.
+\]
+For external flow over a flat plate, the forced-convection Nusselt number is expressed as~\cite{engel2014ExternalForcedConvection}:
+\[
+    \mathrm{Nu_{forced}} = 0.664\,\mathrm{Re_L}^{1/2}\mathrm{Pr}^{1/2} = 185.64.
+\]
+Similarly, the free-convection Nusselt number is given by~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Nu_{free}} =
+    \left(0.825 + \frac{0.387\,\mathrm{Ra_L}^{1/6}}{[1+(0.492/\mathrm{Pr})^{9/16}]^{8/27}}\right)^2
+    = 242.42.
+\]
+The mixed-convection Nusselt number, $\mathrm{Nu_{mix}}$, combines both contributions using~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Nu_{mix}} = (\mathrm{Nu_{forced}^3} + \mathrm{Nu_{free}^3})^{1/3} = 274.33.
+\]
+Finally, the mixed-convection Nusselt number, along with the previously stated fluid properties, is used to determine the convective heat transfer coefficient:
+\[
+    h_\mathrm{conv} = h_\mathrm{conv,top} = h_\mathrm{conv,bottom} =
+    \frac{\mathrm{Nu_{mix}}\,k_\mathrm{air}}{L_\mathrm{c}} = 4.27\ \mathrm{W\ m^{-2}\ K^{-1}}.
+\]
+It is important to note that, for the baseline case, the top and bottom surfaces of the photovoltaic module share identical geometry. Consequently, the same convective heat transfer coefficient, $h_\mathrm{conv}$, can be applied to both surfaces. This is not the case for configurations involving vortex generators, as their presence on the underside of the module alters the geometry. As a result, the convective heat transfer coefficient for the top surface differs from that of the bottom surface in the vortex generator cases.
+
+\textbf{Convective Heat Transfer at the Top Surface of the Photovoltaic Module}\par
+The convective heat transfer rate from the top surface of the photovoltaic module is calculated using the convective heat transfer coefficient, the exposed surface area, and the temperature difference between the module and the ambient air~\cite{engel2014IntroductionAndBasicConcepts}:
+\[
+    \dot{Q}_\mathrm{conv,top}=h_\mathrm{conv,top}A_s(T_\mathrm{mod}-T_\mathrm{amb})=196.26\ \mathrm{W}
+\]
+\textbf{Convective Heat Transfer at the Bottom Surface of the Photovoltaic Module}\par
+Similarly, the convective heat transfer rate from the underside of the module is determined using the variables~\cite{engel2014IntroductionAndBasicConcepts}:
+\[
+    \dot{Q}_\mathrm{conv,bottom}=h_\mathrm{conv,bottom}A_s(T_\mathrm{mod}-T_\mathrm{amb})=196.26\ \mathrm{W}
+\]
+\textbf{Radiative Heat Transfer at the Top Surface of the Photovoltaic Module}\par
+The top surface of the photovoltaic module consists of a glass layer. Consequently, an emissivity of $\varepsilon_\mathrm{rad,top} = 0.88$ was applied, consistent with the value reported by Notton et al.\ (2014)~\cite{Notton_Motte_Cristofari_Canaletti_2014}. The radiative heat transfer rate from the top surface is then calculated~\cite{engel2014IntroductionAndBasicConcepts}:
+\[
+    \dot{Q}_\mathrm{rad,top} = \varepsilon_\mathrm{rad,top} \sigma A_s (T_\mathrm{mod}^4-T_\mathrm{amb}^4)=280.61\ \mathrm{W}
+\]
+\textbf{Radiative Heat Transfer at the Bottom Surface of the Photovoltaic Module}\par
+The underside of the photovoltaic module is constructed from acrylic; therefore, an emissivity of $\varepsilon_\mathrm{rad,bottom} = 0.85$ was adopted, consistent with the value reported by Belliveau et al.\ (2019)~\cite{belliveau2019midinfrared}. The radiative heat transfer rate from the bottom surface is computed as~\cite{engel2014IntroductionAndBasicConcepts}:
+\[
+    \dot{Q}_\mathrm{rad,bottom} = \varepsilon_\mathrm{rad,bottom} \sigma A_s (T_\mathrm{mod}^4-T_\mathrm{amb}^4)=271.04\ \mathrm{W}
+\]
+\textbf{Conductive Heat Transfer via Vortex Generator Array}\par
+The baseline case does not include a vortex generator attached to the underside of the panel. Consequently, the conductive heat-transfer term associated with the vortex generator array is zero for the baseline configuration.
+
+\textbf{Total Heat Lost to the Environment}\par
+The total heat loss from the photovoltaic module to the surrounding environment is obtained by summing the convective and radiative heat transfer contributions from both the top and bottom surfaces:
+\[
+    \therefore\ \dot{Q}_\mathrm{loss} = \dot{Q}_\mathrm{conv,top} + \dot{Q}_\mathrm{conv,bottom} + \dot{Q}_\mathrm{rad,top} + \dot{Q}_\mathrm{rad,bottom} = 944.16\ \mathrm{W}
+\]
+
+\newpage
+\subsubsection*{Appendix D.7: Derivation of Total Heat Lost to the Environment for the 15 mm Vortex Generator Case (25.5 $^\circ$C) or (298.65 K)}\par
+The relevant parameters for this calculation are the surface area of the photovoltaic module, $A_s = 1.6633~\mathrm{m^2}$, the module temperature, $T_{\mathrm{mod}} = 320.4~\mathrm{K}$, and the ambient temperature, $T_{\mathrm{amb}} = 293.05~\mathrm{K}$.
+
+\textbf{Convective Heat Transfer at the Top Surface of the Photovoltaic Module}\par
+To determine the convective heat transfer from the top surface of the photovoltaic module, the convective heat transfer coefficient, $h_\mathrm{conv,top}$, was first evaluated. Accordingly, the module was modelled as an inclined external flat plate, as shown in Figure~\ref{fig:inclined_plate}~\cite{engel2014NaturalConvection}. Based on the experimental rig, the characteristic length was taken as $L_\mathrm{c} = 1.665~\mathrm{m}$, and the module inclination angle was $\theta = 45^\circ$. Since the working fluid was air, the following thermophysical properties were used: the kinematic viscosity $\nu = 1.506\times10^{-5}\ \mathrm{m^2/s}$~\cite{OmniCalculator_KinematicViscosityAir}, Prandtl number $\mathrm{Pr} = 0.707$~\cite{EngineeringToolbox_AirPrandtlNumber_2018}, and thermal conductivity $k_\mathrm{air} = 0.0259\ \mathrm{W/mK}$~\cite{Neutrium_PropertiesOfAir_2012}. In addition, the gravitational acceleration was taken as $g = 9.81~\mathrm{m/s^2}$~\cite{NASA_GRC_WeightAndMass}, and the free-stream velocity was $V = 1~\mathrm{m/s}$.
+
+Before computing $h_\mathrm{conv,top}$, it is necessary to establish the relative contributions of free and forced convection, as this dictates the appropriate Nusselt number formulation. The dominance of each mechanism can be assessed using the ratio
+\[
+    \frac{\mathrm{Gr_L}}{\mathrm{Re_L^2}},
+\]
+where $\mathrm{Gr_L}$ is the Grashof number and $\mathrm{Re_L}$ is the Reynolds number for the photovoltaic module. A value significantly greater than unity indicates free convection dominance, a value significantly less than unity indicates forced convection dominance, and values on the order of unity imply mixed convection~\cite{engel2014NaturalConvection}.
+
+To compute the Grashof number, the thermal expansion coefficient of air, $\beta$, must first be obtained. For ideal gases, $\beta$ is approximated as the inverse of the film temperature, $T_f$, defined as the average of the photovoltaic module surface temperature, $T_\mathrm{mod}$, and the ambient air temperature, $T_\mathrm{amb}$~\cite{engel2014NaturalConvection}:
+\[
+    T_f = \frac{T_\mathrm{mod} + T_\mathrm{amb}}{2} = 312.31\ \mathrm{K}.
+\]
+Therefore,
+\[
+    \beta = \frac{1}{T_f} = 0.0032\ \mathrm{K^{-1}}.
+\]
+With the film temperature and fluid properties known, the Grashof number is calculated as~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Gr_L} = \frac{g\beta \sin{\theta} (T_\mathrm{mod} - T_\mathrm{amb})L_\mathrm{c}^3}{\nu^2} = 1.23\times10^{10}.
+\]
+The Reynolds number is given by~\cite{engel2014FundamentalsOfConvection}:
+\[
+    \mathrm{Re_L} = \frac{V L_\mathrm{c}}{\nu} = 110,557.77.
+\]
+The resulting ratio is:
+\[
+    \frac{\mathrm{Gr_L}}{\mathrm{Re_L^2}} = 1.01 \approx 1,
+\]
+indicating that buoyancy and forced flow contribute comparably to the heat-transfer process. Consequently, a mixed-convection formulation is required~\cite{engel2014NaturalConvection}.
+
+The free-convection contribution is represented using the Rayleigh number, $\mathrm{Ra_L}$, defined as ~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Ra_L} = \mathrm{Gr_L}\,\mathrm{Pr} = 8.72 \times 10^{9}.
+\]
+For external flow over a flat plate, the forced-convection Nusselt number is expressed as~\cite{engel2014ExternalForcedConvection}:
+\[
+    \mathrm{Nu_{forced}} = 0.664\,\mathrm{Re_L}^{1/2}\mathrm{Pr}^{1/2} = 185.64.
+\]
+Similarly, the free-convection Nusselt number is given by~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Nu_{free}} =
+    \left(0.825 + \frac{0.387\,\mathrm{Ra_L}^{1/6}}{[1+(0.492/\mathrm{Pr})^{9/16}]^{8/27}}\right)^2
+    = 241.52.
+\]
+The mixed-convection Nusselt number, $\mathrm{Nu_{mix}}$, combines both contributions using~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Nu_{mix}} = (\mathrm{Nu_{forced}^3} + \mathrm{Nu_{free}^3})^{1/3} = 273.62.
+\]
+Finally, the mixed-convection Nusselt number, along with the previously stated fluid properties, is used to determine the convective heat transfer coefficient:
+\[
+    h_\mathrm{conv,top} =
+    \frac{\mathrm{Nu_{mix}}\,k_\mathrm{air}}{L_\mathrm{c}} = 4.26\ \mathrm{W\ m^{-2}\ K^{-1}}.
+\]
+Thus, the convective heat transfer rate from the top surface of the photovoltaic module can be determined~\cite{engel2014IntroductionAndBasicConcepts}:
+\[
+    \dot{Q}_\mathrm{conv,top}=h_\mathrm{conv,top}A_s(T_\mathrm{mod}-T_\mathrm{amb})=193.35\ \mathrm{W}
+\]
+\textbf{Radiative Heat Transfer at the Top Surface of the Photovoltaic Module}\par
+The top surface of the photovoltaic module consists of a glass layer. Consequently, an emissivity of $\varepsilon_\mathrm{rad,top} = 0.88$ was applied, consistent with the value reported by Notton et al.\ (2014) \cite{Notton_Motte_Cristofari_Canaletti_2014}.
+\[
+    \dot{Q}_\mathrm{rad,top} = \varepsilon_\mathrm{rad,top} \sigma A_s (T_\mathrm{mod}^4-T_\mathrm{amb}^4)=276.69\ \mathrm{W}
+\]
+\textbf{Radiative Heat Transfer at the Bottom Surface of the Photovoltaic Module}\par
+The underside of the photovoltaic module is made of acrylic; therefore, an emissivity of $\varepsilon_\mathrm{rad,bottom} = 0.85$ was adopted, consistent with the value reported by Belliveau et al.\ (2019) \cite{belliveau2019midinfrared}.
+\[
+    \dot{Q}_\mathrm{rad,bottom} = \varepsilon_\mathrm{rad,bottom} \sigma A_s (T_\mathrm{mod}^4-T_\mathrm{amb}^4)=267.26\ \mathrm{W}
+\]
+\textbf{Conductive Heat Transfer via the Attached Vortex Generator Array}\par
+Conductive heat transfer from the photovoltaic module to the attached vortex generator array is calculated by modelling the array as a finned heat sink \cite{engel2014SteadyHeatConduction}. Thus, in the following derivation, the terms fin and vortex generator are used interchangeably.
+
+Furthermore, to determine whether the fin tip should be modelled as adiabatic or convective, the ratio of the tip area, $A_\mathrm{tip}$, to the lateral area, $A_\mathrm{lat}$, of the vortex generator should be assessed. If this ratio is sufficiently large, indicating that heat loss through the tip is non-negligible, a convective boundary condition at the tip should be applied rather than assuming an adiabatic tip \cite{incropera2011fundamentals}.
+\[
+    \frac{A_\mathrm{tip}}{A_\mathrm{lat}}=\frac{\pi r^2}{2\pi rL}=0.33
+\]
+Given that the tip area is approximately 33\% of the lateral area, heat loss through the tip is not negligible, and the tip cannot be treated as adiabatic.
+
+The geometric properties of the fin, namely the cross-sectional area $A_c$ and perimeter, $P$, can be determined.
+\[
+    A_c=\pi r^2 = 0.00031\ \mathrm{m^2}
+\]
+\[
+    P=2\pi r = 0.063\ \mathrm{m^2}
+\]
+In addition, the excess temperature at the fin base relative to the ambient air, $\theta_b$, is calculated using the experimentally obtained values \cite{deSilva2024conduction3}. It is noted that the fin-base temperature is taken to be the photovoltaic module temperature, as the vortex generator array is attached directly to the underside of the module.
+\[
+    \theta_b=T_\mathrm{base}-T_\mathrm{amb}=27.31\ \mathrm{K}
+\]
+To compute the fin parameter $m$, the convective heat-transfer coefficient for a single cylindrical vortex generator in cross-flow, $h_\mathrm{cyl}$, must first be determined. This requires evaluating the Reynolds number, $\mathrm{Re_D}$ \cite{engel2014ExternalForcedConvection}.
+\[
+    \mathrm{Re_D} = \frac{VD}{\nu}=1328.02
+\]
+ This value is then used to obtain the corresponding Nusselt number, $\mathrm{Nu_\mathrm{cyl}}$, using the Churchill–Bernstein correlation \cite{engel2014ExternalForcedConvection}.
+\[
+\mathrm{Nu}_{\mathrm{cyl}} = 0.3
++ \frac{0.62\,\mathrm{Re_D}^{\tfrac{1}{2}}\mathrm{Pr}^{\tfrac{1}{3}}}
+       {\left(1 + \tfrac{0.4}{\mathrm{Pr}^{\tfrac{2}{3}}}\right)^{\tfrac{1}{4}}}
+\left(1 + \left(\tfrac{\mathrm{Re_D}}{282{,}000}\right)^{\tfrac{5}{8}}\right)^{\tfrac{4}{5}}=18.46
+\]
+Finally, the Nusselt number can be related to the thermal conductivity, $k_\mathrm{air}$, to evaluate the convective heat transfer coefficient for a single cylindrical vortex generator in cross-flow, $h_\mathrm{cyl}$ \cite{engel2014ExternalForcedConvection}.
+\[
+    h_\mathrm{cyl}=\frac{\mathrm{Nu_{cyl}}k_\mathrm{air}}{L_\mathrm{c}}=23.91 \ \mathrm{W\ m^{-2}\ K^{-1}}
+\]
+Thus, together with the thermal conductivity of PLA, $k_\mathrm{PLA} = 0.13\ \mathrm{W/mK}$ \cite{ISLAM2023105979}, the fin parameter, $m_\mathrm{fin}$, can be evaluated \cite{deSilva2024conduction3}.
+\[
+    m_\mathrm{fin} = \sqrt{\frac{h_\mathrm{cyl} P}{k_\mathrm{PLA} A_c}} = 191.80.
+\]
+The fin conduction parameter $M_\mathrm{fin}$ can also be determined using the previously evaluated convective heat-transfer coefficient for a single vortex generator, $h_\mathrm{cyl}$, together with the experimentally determined properties and the relevant geometric characteristics of the vortex generator \cite{deSilva2024conduction3}.
+\[
+    M_\mathrm{fin}=\sqrt{h_\mathrm{cyl}Pk_\mathrm{PLA}A_c}\theta_b=0.21
+\]
+Finally, the convective-tip boundary condition is applied to obtain the total heat removed by a single fin \cite{deSilva2024conduction3}.
+\[
+    \dot{Q}_\mathrm{cond,vg}=M_\mathrm{fin}\frac{\sinh{m_\mathrm{fin}L}+(\frac{h_\mathrm{cyl}}{m_\mathrm{fin}k_\mathrm{PLA}})\cosh{m_\mathrm{fin}L}}{\cosh{m_\mathrm{fin}L}+(\frac{h_\mathrm{cyl}}{m_\mathrm{fin}k_\mathrm{PLA}})\sinh{m_\mathrm{fin}L}}=0.21\ \mathrm{W}
+\]
+The presence of the vortex generator array necessitates multiplying the heat removed by a single fin by $N = 156$, corresponding to the total number of vortex generators in the array.
+\[
+    \dot{Q}_\mathrm{cond,array}=N\dot{Q}_\mathrm{cond,vg}=33.37\ \mathrm{W}
+\]
+\textbf{Convective Heat Transfer at the Bottom Surface of the Photovoltaic Module}\par
+The presence of the vortex generator array on the underside of the photovoltaic module complicates the formulation of the convective heat-transfer coefficient at the bottom surface, $h_\mathrm{conv,bottom}$. Consequently, the corresponding baseline energy balance equation was employed to determine both the convective heat transfer and the associated convective heat-transfer coefficient at the bottom surface of the module.
+
+As determined in Appendix~D.6, the total heat lost to the environment for the baseline case at an ambient temperature of 25.5~$^\circ$C was calculated to be 944.16~W. Owing to the fundamental principle of the energy balance, the heat entering the system must therefore also be 944.16~W at steady state. Consequently, a heat input of 944.16~W is used for the corresponding vortex generator case in the energy balance equation, as shown below.
+\[
+    944.16\ \mathrm{W} = \dot{Q}_\mathrm{conv,top} + \dot{Q}_\mathrm{conv,bottom} +\dot{Q}_\mathrm{rad,top}+\dot{Q}_\mathrm{rad,bottom}+\dot{Q}_\mathrm{cond,array}
+\]
+Given that all other terms in the expression are known, the equation can be rearranged to solve for the convective heat transfer at the bottom surface of the photovoltaic module.
+\[
+    \dot{Q}_\mathrm{conv,bottom} = 944.16 - \dot{Q}_\mathrm{conv,top} - \dot{Q}_\mathrm{rad,top}-\dot{Q}_\mathrm{rad,bottom}-\dot{Q}_\mathrm{cond,array}=173.50\ \mathrm{W}
+\]
+Furthermore, the generalised expression for convective heat transfer, given by Newton's law of cooling~\cite{engel2014IntroductionAndBasicConcepts}, can be applied together with the recorded module and ambient temperatures and the specified bottom surface area to determine the convective heat transfer coefficient at the underside of the photovoltaic module.
+\[
+    h_\mathrm{conv,bottom}=\frac{T_\mathrm{mod}-T_\mathrm{amb}}{A_\mathrm{s}}=3.81\ \mathrm{W\ m^{-2}\ K^{-1}}
+\]
+\newpage
+\subsubsection*{Appendix D.8: Derivation of Total Heat Lost to the Environment for the 75 mm Vortex Generator Case (19.9 $^\circ$C) or (293.05 K)}\par
+The relevant parameters for this calculation are the surface area of the photovoltaic module, $A_s = 1.6633~\mathrm{m^2}$, the module temperature, $T_{\mathrm{mod}} = 321.15~\mathrm{K}$, and the ambient temperature, $T_{\mathrm{amb}} = 293.05~\mathrm{K}$.
+
+\textbf{Convective Heat Transfer at the Top Surface of the Photovoltaic Module}\par
+To determine the convective heat transfer from the top surface of the photovoltaic module, the convective heat transfer coefficient, $h_\mathrm{conv,top}$, was first evaluated. Accordingly, the module was modelled as an inclined external flat plate, as shown in Figure~\ref{fig:inclined_plate}~\cite{engel2014NaturalConvection}. Based on the experimental rig, the characteristic length was taken as $L_\mathrm{c} = 1.665~\mathrm{m}$, and the module inclination angle was $\theta = 45^\circ$. Since the working fluid was air, the following thermophysical properties were used: the kinematic viscosity $\nu = 1.506\times10^{-5}\ \mathrm{m^2/s}$~\cite{OmniCalculator_KinematicViscosityAir}, Prandtl number $\mathrm{Pr} = 0.707$~\cite{EngineeringToolbox_AirPrandtlNumber_2018}, and thermal conductivity $k_\mathrm{air} = 0.0259\ \mathrm{W/mK}$~\cite{Neutrium_PropertiesOfAir_2012}. In addition, the gravitational acceleration was taken as $g = 9.81~\mathrm{m/s^2}$~\cite{NASA_GRC_WeightAndMass}, and the free-stream velocity was $V = 1~\mathrm{m/s}$.
+
+Before computing $h_\mathrm{conv,top}$, it is necessary to establish the relative contributions of free and forced convection, as this dictates the appropriate Nusselt number formulation. The dominance of each mechanism can be assessed using the ratio
+\[
+    \frac{\mathrm{Gr_L}}{\mathrm{Re_L^2}},
+\]
+where $\mathrm{Gr_L}$ is the Grashof number and $\mathrm{Re_L}$ is the Reynolds number for the photovoltaic module. A value significantly greater than unity indicates free convection dominance, a value significantly less than unity indicates forced convection dominance, and values on the order of unity imply mixed convection~\cite{engel2014NaturalConvection}.
+
+To compute the Grashof number, the thermal expansion coefficient of air, $\beta$, must first be obtained. For ideal gases, $\beta$ is approximated as the inverse of the film temperature, $T_f$, defined as the average of the photovoltaic module surface temperature, $T_\mathrm{mod}$, and the ambient air temperature, $T_\mathrm{amb}$~\cite{engel2014NaturalConvection}:
+\[
+    T_f = \frac{T_\mathrm{mod} + T_\mathrm{amb}}{2} = 307.10\ \mathrm{K}.
+\]
+Therefore,
+\[
+    \beta = \frac{1}{T_f} = 0.0033\ \mathrm{K^{-1}}.
+\]
+With the film temperature and fluid properties known, the Grashof number is calculated as~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Gr_L} = \frac{g\beta \sin{\theta} (T_\mathrm{mod} - T_\mathrm{amb})L_\mathrm{c}^3}{\nu^2} = 1.29\times10^{10}.
+\]
+The Reynolds number is given by~\cite{engel2014FundamentalsOfConvection}:
+\[
+    \mathrm{Re_L} = \frac{V L_\mathrm{c}}{\nu} = 110,557.77.
+\]
+The resulting ratio is:
+\[
+    \frac{\mathrm{Gr_L}}{\mathrm{Re_L^2}} = 1.06 \approx 1,
+\]
+indicating that buoyancy and forced flow contribute comparably to the heat-transfer process. Consequently, a mixed-convection formulation is required~\cite{engel2014NaturalConvection}.
+
+The free-convection contribution is represented using the Rayleigh number, $\mathrm{Ra_L}$, defined as ~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Ra_L} = \mathrm{Gr_L}\,\mathrm{Pr} = 9.13 \times 10^{9}.
+\]
+For external flow over a flat plate, the forced-convection Nusselt number is expressed as~\cite{engel2014ExternalForcedConvection}:
+\[
+    \mathrm{Nu_{forced}} = 0.664\,\mathrm{Re_L}^{1/2}\mathrm{Pr}^{1/2} = 185.64.
+\]
+Similarly, the free-convection Nusselt number is given by~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Nu_{free}} =
+    \left(0.825 + \frac{0.387\,\mathrm{Ra_L}^{1/6}}{[1+(0.492/\mathrm{Pr})^{9/16}]^{8/27}}\right)^2
+    = 245.00.
+\]
+The mixed-convection Nusselt number, $\mathrm{Nu_{mix}}$, combines both contributions using~\cite{engel2014NaturalConvection}:
+\[
+    \mathrm{Nu_{mix}} = (\mathrm{Nu_{forced}^3} + \mathrm{Nu_{free}^3})^{1/3} = 276.35.
+\]
+Finally, the mixed-convection Nusselt number, along with the previously stated fluid properties, is used to determine the convective heat transfer coefficient:
+\[
+    h_\mathrm{conv,top} =
+    \frac{\mathrm{Nu_{mix}}\,k_\mathrm{air}}{L_\mathrm{c}} = 4.30\ \mathrm{W\ m^{-2}\ K^{-1}}.
+\]
+Thus, the convective heat transfer rate from the top surface of the photovoltaic module can be determined~\cite{engel2014IntroductionAndBasicConcepts}:
+\[
+    \dot{Q}_\mathrm{conv,top}=h_\mathrm{conv,top}A_s(T_\mathrm{mod}-T_\mathrm{amb})=200.92\ \mathrm{W}
+\]
+\textbf{Radiative Heat Transfer at the Top Surface of the Photovoltaic Module}\par
+The top surface of the photovoltaic module consists of a glass layer. Consequently, an emissivity of $\varepsilon_\mathrm{rad,top} = 0.88$ was applied, consistent with the value reported by Notton et al.\ (2014) \cite{Notton_Motte_Cristofari_Canaletti_2014}.
+\[
+    \dot{Q}_\mathrm{rad,top} = \varepsilon_\mathrm{rad,top} \sigma A_s (T_\mathrm{mod}^4-T_\mathrm{amb}^4)=270.74\ \mathrm{W}
+\]
+\textbf{Radiative Heat Transfer at the Bottom Surface of the Photovoltaic Module}\par
+The underside of the photovoltaic module is made of acrylic; therefore, an emissivity of $\varepsilon_\mathrm{rad,bottom} = 0.85$ was adopted, consistent with the value reported by Belliveau et al.\ (2019) \cite{belliveau2019midinfrared}.
+\[
+    \dot{Q}_\mathrm{rad,bottom} = \varepsilon_\mathrm{rad,bottom} \sigma A_s (T_\mathrm{mod}^4-T_\mathrm{amb}^4)=253.81\ \mathrm{W}
+\]
+\textbf{Conductive Heat Transfer via the Attached Vortex Generator Array}\par
+Conductive heat transfer from the photovoltaic module to the attached vortex generator array is calculated by modelling the array as a finned heat sink \cite{engel2014SteadyHeatConduction}. Thus, in the following derivation, the terms fin and vortex generator are used interchangeably.
+
+Furthermore, to determine whether the fin tip should be modelled as adiabatic or convective, the ratio of the tip area, $A_\mathrm{tip}$, to the lateral area, $A_\mathrm{lat}$, of the vortex generator should be assessed. If this ratio is sufficiently large, indicating that heat loss through the tip is non-negligible, a convective boundary condition at the tip should be applied rather than assuming an adiabatic tip \cite{incropera2011fundamentals}.
+\[
+    \frac{A_\mathrm{tip}}{A_\mathrm{lat}}=\frac{\pi r^2}{2\pi r L}=0.067
+\]
+Given that the tip area is approximately 7\% of the lateral area, heat loss through the tip is not negligible, and the tip cannot be treated as adiabatic.
+
+The geometric properties of the fin, namely the cross-sectional area $A_c$ and perimeter, $P$, can be determined.
+\[
+    A_c=\pi r^2 = 0.00031\ \mathrm{m^2}
+\]
+\[
+    P=2\pi r = 0.063\ \mathrm{m^2}
+\]
+In addition, the excess temperature at the fin base relative to the ambient air, $\theta_b$, is calculated using the experimentally obtained values \cite{deSilva2024conduction3}. It is noted that the fin-base temperature is taken to be the photovoltaic module temperature, as the vortex generator array is attached directly to the underside of the module.
+\[
+    \theta_b=T_\mathrm{base}-T_\mathrm{amb}=28.10\ \mathrm{K}
+\]
+To compute the fin parameter $m$, the convective heat-transfer coefficient for a single cylindrical vortex generator in cross-flow, $h_\mathrm{cyl}$, must first be determined. This requires evaluating the Reynolds number, $\mathrm{Re_D}$ \cite{engel2014ExternalForcedConvection}.
+\[
+    \mathrm{Re_D} = \frac{VD}{\nu}=1328.02
+\]
+ This value is then used to obtain the corresponding Nusselt number, $\mathrm{Nu_\mathrm{cyl}}$, using the Churchill–Bernstein correlation \cite{engel2014ExternalForcedConvection}.
+\[
+\mathrm{Nu}_{\mathrm{cyl}} = 0.3
++ \frac{0.62\,\mathrm{Re_D}^{\tfrac{1}{2}}\mathrm{Pr}^{\tfrac{1}{3}}}
+       {\left(1 + \tfrac{0.4}{\mathrm{Pr}^{\tfrac{2}{3}}}\right)^{\tfrac{1}{4}}}
+\left(1 + \left(\tfrac{\mathrm{Re_D}}{282{,}000}\right)^{\tfrac{5}{8}}\right)^{\tfrac{4}{5}}=18.46
+\]
+Finally, the Nusselt number can be related to the thermal conductivity, $k_\mathrm{air}$, to evaluate the convective heat transfer coefficient for a single cylindrical vortex generator in cross-flow, $h_\mathrm{cyl}$ \cite{engel2014ExternalForcedConvection}.
+\[
+    h_\mathrm{cyl}=\frac{\mathrm{Nu_{cyl}}k_\mathrm{air}}{L_\mathrm{c}}=23.91 \ \mathrm{W\ m^{-2}\ K^{-1}}
+\]
+Thus, together with the thermal conductivity of PLA, $k_\mathrm{PLA} = 0.13\ \mathrm{W/mK}$ \cite{ISLAM2023105979}, the fin parameter, $m_\mathrm{fin}$, can be evaluated \cite{deSilva2024conduction3}.
+\[
+    m_\mathrm{fin} = \sqrt{\frac{h_\mathrm{cyl} P}{k_\mathrm{PLA} A_c}} = 191.80.
+\]
+The fin conduction parameter $M_\mathrm{fin}$ can also be determined using the previously evaluated convective heat-transfer coefficient for a single vortex generator, $h_\mathrm{cyl}$, together with the experimentally determined properties and the relevant geometric characteristics of the vortex generator \cite{deSilva2024conduction3}.
+\[
+    M_\mathrm{fin}=\sqrt{h_\mathrm{cyl}Pk_\mathrm{PLA}A_c}\theta_b=0.22
+\]
+Finally, the convective-tip boundary condition is applied to obtain the total heat removed by a single fin \cite{deSilva2024conduction3}.
+\[
+    \dot{Q}_\mathrm{cond,vg}=M_\mathrm{fin}\frac{\sinh{m_\mathrm{fin}L}+(\frac{h_\mathrm{cyl}}{m_\mathrm{fin}k_\mathrm{PLA}})\cosh{m_\mathrm{fin}L}}{\cosh{m_\mathrm{fin}L}+(\frac{h_\mathrm{cyl}}{m_\mathrm{fin}k_\mathrm{PLA}})\sinh{m_\mathrm{fin}L}}=0.22\ \mathrm{W}
+\]
+The presence of the vortex generator array necessitates multiplying the heat removed by a single fin by $N = 156$, corresponding to the total number of vortex generators in the array.
+\[
+    \dot{Q}_\mathrm{cond,array}=N\dot{Q}_\mathrm{cond,vg}=34.34\ \mathrm{W}
+\]
+\textbf{Convective Heat Transfer at the Bottom Surface of the Photovoltaic Module}\par
+The presence of the vortex generator array on the underside of the photovoltaic module complicates the formulation of the convective heat-transfer coefficient at the bottom surface, $h_\mathrm{conv,bottom}$. Consequently, the corresponding baseline energy balance equation was employed to determine both the convective heat transfer and the associated convective heat-transfer coefficient at the bottom surface of the module.
+
+As determined in Appendix~D.4, the total heat lost to the environment for the baseline case at an ambient temperature of 19.9~$^\circ$C was calculated to be 863.86~W. Owing to the fundamental principle of the energy balance, the heat entering the system must therefore also be 863.86~W at steady state. Consequently, a heat input of 863.86~W is used for the corresponding vortex generator case in the energy balance equation, as shown below.
+\[
+    863.86\ \mathrm{W} = \dot{Q}_\mathrm{conv,top} + \dot{Q}_\mathrm{conv,bottom} +\dot{Q}_\mathrm{rad,top}+\dot{Q}_\mathrm{rad,bottom}+\dot{Q}_\mathrm{cond,array}
+\]
+Given that all other terms in the expression are known, the equation can be rearranged to solve for the convective heat transfer at the bottom surface of the photovoltaic module.
+\[
+    \dot{Q}_\mathrm{conv,bottom} = 863.86 - \dot{Q}_\mathrm{conv,top} - \dot{Q}_\mathrm{rad,top}-\dot{Q}_\mathrm{rad,bottom}-\dot{Q}_\mathrm{cond,array}=104.05\ \mathrm{W}
+\]
+Furthermore, the generalised expression for convective heat transfer, given by Newton's law of cooling~\cite{engel2014IntroductionAndBasicConcepts}, can be applied together with the recorded module and ambient temperatures and the specified bottom surface area to determine the convective heat transfer coefficient at the underside of the photovoltaic module.
+\[
+    h_\mathrm{conv,bottom}=\frac{T_\mathrm{mod}-T_\mathrm{amb}}{A_\mathrm{s}}=2.23\ \mathrm{W\ m^{-2}\ K^{-1}}
+\]
+
+\newpage
+\subsectiontoc{Appendix E: Risk Assessment}
+\subsubsection*{Appendix E.1: Identify Hazards and Control Risks}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/identify_hazards_and_control_risks_1.pdf}
+    \caption{Risk Assessment: Identify Hazards and Control the Risks (Part 1 of 3)}
+    \label{fig:identify_hazards_and_control_risks_1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/identify_hazards_and_control_risks_2.pdf}
+    \caption{Risk Assessment: Identify Hazards and Control the Risks (Part 2 of 3)}
+    \label{fig:identify_hazards_and_control_risks_2}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/identify_hazards_and_control_risks_3.pdf}
+    \caption{Risk Assessment: Identify Hazards and Control the Risks (Part 3 of 3)}
+    \label{fig:identify_hazards_and_control_risks_3}
+\end{figure}
+
+\newpage
+\subsubsection*{Appendix E.2: Risk Rating Matrix}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/risk_assessment_1.pdf}
+    \caption{Risk Assessment: Risk Rating Methodology and Matrix}
+    \label{fig:risk_assessment_1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/risk_assessment_2.pdf}
+    \caption{Risk Assessment: Risk Level and Required Action}
+    \label{fig:risk_assessment_2}
+\end{figure}
+
+\begin{comment}
+\newpage
+
+\subsection*{Appendix E.1: Identify Hazards and Control the Risks}
+\renewcommand{\arraystretch}{1.5} % Increase row height to 1.5x
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.3\textwidth}|>{\raggedright\arraybackslash}p{0.65\textwidth}|}
+\caption{Risk Assessment: Identify Hazards and Control the Risks.} \\
+\hline
+\textbf{Field} & \textbf{Details} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Field} & \textbf{Details} \\
+\hline
+\endhead
+
+\hline
+\multicolumn{2}{|r|}{\textit{Continued on next page}} \\
+\hline
+\endfoot
+
+\hline
+\endlastfoot
+
+\textbf{Task/Scenario} & Setting up the experimental rig \\
+\textbf{Hazard} & Tripping over equipment both inside and outside the wind tunnel \\
+\textbf{Associated Harm} & Slip/trip/fall injury \\
+\textbf{Existing Controls} &
+\begin{itemize}[leftmargin=*]
+  \item Ensure a clean workspace
+  \item Undergo extensive training in experimental setup
+  \item Enclosed shoes are always worn
+  \item Caution is taken when moving inside and outside the wind tunnel
+\end{itemize} \\
+\textbf{Any Additional Controls} & No \\
+\textbf{Risk Rating} & C: 2,\quad L: C,\quad R: M \\
+\textbf{Cost of Controls} & Time, Effort \\
+\textbf{Reasonably Practicable?} & Yes \\
+\hline
+
+\textbf{Task/Scenario} & Setting up the experimental rig \\
+\textbf{Hazard} & Jamming fingers during installation of vortex generators \\
+\textbf{Associated Harm} & Physical injury \\
+\textbf{Existing Controls} &
+\begin{itemize}[leftmargin=*]
+  \item Caution is taken when installing vortex generators
+  \item Two people should install the roof sections to reduce injury
+\end{itemize} \\
+\textbf{Any Additional Controls} & No \\
+\textbf{Risk Rating} & C: 2,\quad L: C,\quad R: M \\
+\textbf{Cost of Controls} & Time, Effort \\
+\textbf{Reasonably Practicable?} & Yes \\
+\hline
+
+\textbf{Task/Scenario} & Touching the photovoltaic module when turned on \\
+\textbf{Hazard} & Touching the module \\
+\textbf{Associated Harm} & Burn injury \\
+\textbf{Existing Controls} &
+\begin{itemize}[leftmargin=*]
+  \item Do not turn it on unless necessary
+  \item Practice extreme caution when the module is on
+\end{itemize} \\
+\textbf{Any Additional Controls} & No \\
+\textbf{Risk Rating} & C: 2,\quad L: C,\quad R: M \\
+\textbf{Cost of Controls} & Time, Effort \\
+\textbf{Reasonably Practicable?} & Yes \\
+\hline
+
+\textbf{Task/Scenario} & Turning the wind tunnel on and off \\
+\textbf{Hazard} & Exposure to extremely high current \\
+\textbf{Associated Harm} & Physical injury / Fatal \\
+\textbf{Existing Controls} &
+\begin{itemize}[leftmargin=*]
+  \item Follow procedure outlined by Matthew Deng
+  \item Press emergency stop button if issues arise
+  \item Do not attempt to fix internal components
+\end{itemize} \\
+\textbf{Any Additional Controls} & No \\
+\textbf{Risk Rating} & C: 5,\quad L: E,\quad R: M \\
+\textbf{Cost of Controls} & Time, Effort \\
+\textbf{Reasonably Practicable?} & Yes \\
+\hline
+
+\textbf{Task/Scenario} & Operation of the wind tunnel \\
+\textbf{Hazard} & Excessive noise \\
+\textbf{Associated Harm} & Hearing loss \\
+\textbf{Existing Controls} &
+\begin{itemize}[leftmargin=*]
+  \item Use ear plugs during wind tunnel operation
+  \item Move away from the wind tunnel once it is operating
+\end{itemize} \\
+\textbf{Any Additional Controls} & No \\
+\textbf{Risk Rating} & C: 2,\quad L: D,\quad R: L \\
+\textbf{Cost of Controls} & Time, Effort, Money \\
+\textbf{Reasonably Practicable?} & Yes \\
+\hline
+
+\textbf{Task/Scenario} & Presence in the lab \\
+\textbf{Hazard} & Potential exposure to chemical spills \\
+\textbf{Associated Harm} & Slip/trip/fall injury \\
+\textbf{Existing Controls} &
+\begin{itemize}[leftmargin=*]
+  \item Do not bring food and drink into the laboratory.
+  \item Exercise caution when walking through the laboratory.
+  \item Exercise caution when walking through the laboratory.
+  \item If a spill has been identified as harmless, clean it up to avoid potential injury.
+  \item If the material is identified as harmful, alert the Lab Technical Officer immediately.
+\end{itemize} \\
+\textbf{Any Additional Controls} & No \\
+\textbf{Risk Rating} & C: 2,\quad L: C,\quad R: M \\
+\textbf{Cost of Controls} & Time, Effort \\
+\textbf{Reasonably Practicable?} & Yes \\
+\hline
+
+\end{longtable}
+
+\newpage
+\end{comment}
+\begin{comment}
+\newpage
+\subsection*{Appendix E.2: Risk Rating Matrix}
+\begin{table}[ht]
+    \centering
+    \caption{Risk Assessment: Risk Level and Required Action}
+    \resizebox{\textwidth}{!}{  % Resize to fit the width of the page
+    \renewcommand{\arraystretch}{1.5}  % Increase row height (vertical padding)
+    \begin{tabular}{|c|p{\textwidth}|} \hline
+         \textbf{Risk Level} & \textbf{Required Action} \\\hline
+         \textbf{Very High} & \underline{Act immediately}: The proposed task or process activity must not proceed. Steps must be taken to lower the risk level to as low as reasonably practicable using the hierarchy of risk controls. \\
+         & \hspace{5mm} \textbf{I.} The risk level has been reduced to as low as reasonably practicable using the hierarchy of risk controls \\
+         & \hspace{5mm} \textbf{II.} The risk controls must include those identified in legislation, Australian Standards, Codes of Practice etc. \\
+         & \hspace{5mm} \textbf{III.} The document has been reviewed and approved by the Supervisor \\
+         & \hspace{5mm} \textbf{IV.} A Safe Working Procedure or Safe Work Method has been prepared \\
+         & \hspace{5mm} \textbf{V.} The supervisor must review and document the effectiveness of the implemented risk controls \\\hline
+         \textbf{High} & \underline{Act today}: The proposed activity can only proceed, provided that: \\\hline
+         \textbf{Medium} & \underline{Act this week}: The proposed task or process can proceed, provided that: \\
+         & \hspace{5mm} \textbf{I.} The risk level has been reduced to as low as reasonably practicable using the hierarchy of controls  \\
+         & \hspace{5mm} \textbf{II.} The document has been reviewed and approved by the Supervisor \\
+         & \hspace{5mm} \textbf{III.} A Safe Working Procedure or Safe Work Method has been prepared \\\hline
+         \textbf{Low} & \underline{Act this month}: Managed by local documented routine procedures which must include application of the hierarchy of controls.\\ \hline
+    \end{tabular}
+    }
+    \label{tab:risk_level_and_required_action}
+\end{table}
+
+\newpage
+\begin{table}[ht]
+    \centering
+    \caption{Risk Assessment: Risk Rating Methodology and Matrix}
+    \renewcommand{\arraystretch}{1.5}  % 1.5x row height
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{|>{\centering\arraybackslash}m{7cm}|>{\raggedright\arraybackslash}m{7cm}|}
+        \hline
+        \multicolumn{2}{|c|}{\textbf{Consider the Consequences}} \\
+        \hline
+        Consider: What type of harm could occur (minor, serious, death)? Is there anything that will influence the severity (e.g. proximity to hazard, person involved in task etc.). How many people are exposed to the hazard? Could one failure lead to other failures? Could a small event escalate? 
+        &
+        \textbf{5. Severe}: death or permanent disability to one or more persons \newline
+        \textbf{4. Major}: hospital admission required \newline
+        \textbf{3. Moderate}: medical treatment required \newline
+        \textbf{2. Minor}: first aid required \newline
+        \textbf{1. Insignificant}: injuries not requiring first aid \\
+        \hline
+
+        \multicolumn{2}{|c|}{\textbf{Consider the Likelihood}} \\
+        \hline
+        Consider: How often is the task done? Has an accident happened before (here or at another workplace)? How long are people exposed? How effective are the control measures? Does the environment affect it (e.g. lighting/temperature/pace)? What are people’s behaviours (e.g. stress, panic, deadlines)? What people are exposed (e.g. disabled, young workers etc.)?
+        &
+        \vspace{-1.15em}
+        \textbf{A. Almost certain}: expected to occur in most circumstances \newline
+        \textbf{B. Likely}: will probably occur in most circumstances \newline
+        \textbf{C. Possible}: might occur occasionally \newline
+        \textbf{D. Unlikely}: could happen at some time \newline
+        \textbf{E. Rare}: may happen only in exceptional circumstances \\
+        \hline
+
+        \multicolumn{2}{|c|}{\textbf{Calculate the Risk}} \\
+        \hline
+        \vspace{-5em}
+        1. Take the consequences rating and select the correct column. \newline
+        2. Take the likelihood rating and select the correct row. \newline
+        3. Select the risk rating where the two ratings cross on the matrix below. \newline
+        \vspace{1em}
+        
+        \textbf{VH = Very high, H = High, M = Medium, L = Low}
+        &
+        % Right cell with horizontally and vertically centered content
+        \vspace{-4em}
+        \begin{minipage}[c][7cm][c]{\linewidth} 
+            \centering % Horizontally centers content inside minipage
+            \vfill % Vertically centers content inside minipage
+            \setlength{\extrarowheight}{2pt}
+            \begin{tabular}{|c|c|c|c|c|c|c|}
+                \hline
+                \rowcolor{white} & \multicolumn{5}{c|}{\textbf{Consequences}} & \\ \cline{2-6}
+                \rowcolor{white} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \\ \hline
+                \multirow{5}{*}{\rotatebox{90}{\textbf{Likelihood}}} 
+                & \cellcolor{green!50} M & \cellcolor{yellow} H & \cellcolor{yellow} H & \cellcolor{red} VH & \cellcolor{red} VH & \textbf{A} \\ \cline{2-7}
+                & \cellcolor{green!50} M & \cellcolor{green!50} M & \cellcolor{yellow} H & \cellcolor{yellow} H & \cellcolor{red} VH & \textbf{B} \\ \cline{2-7}
+                & \cellcolor{blue!40} L & \cellcolor{green!50} M & \cellcolor{yellow} H & \cellcolor{yellow} H & \cellcolor{red} VH & \textbf{C} \\ \cline{2-7}
+                & \cellcolor{blue!40} L & \cellcolor{blue!40} L & \cellcolor{green!50} M & \cellcolor{green!50} M & \cellcolor{yellow} H & \textbf{D} \\ \cline{2-7}
+                & \cellcolor{blue!40} L & \cellcolor{blue!40} L & \cellcolor{green!50} M & \cellcolor{green!50} M & \cellcolor{green!50} M & \textbf{E} \\ \hline
+        \end{tabular}
+        \vfill % Vertically centers content inside minipage
+    \end{minipage}
+    \vspace{0.5em}
+    \\
+    \hline
+    \end{tabular}
+    }
+    \renewcommand{\arraystretch}{1.0}  % Reset for safety
+    \label{tab:risk_assessment:_risk_rating_methodology_and_matrix}
+\end{table}
+\end{comment}

@@ -1,0 +1,231 @@
+\documentclass{article}
+
+% -----------------
+% Packages
+% -----------------
+\usepackage{nomencl}
+\usepackage[
+  left=2cm,
+  right=2cm,
+  top=2.5cm,
+  bottom=2cm
+]{geometry}
+\usepackage[bottom]{footmisc}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{import}
+\usepackage{tabularx}
+\usepackage{comment}
+\usepackage{fancyhdr}
+\usepackage{tocloft}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage[justification=centering]{caption}
+\captionsetup{font=onehalfspacing}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{ulem}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{longtable, array, enumitem}
+\usepackage[table]{xcolor}
+
+
+\definecolor{codegray}{rgb}{0.95,0.95,0.95}
+\definecolor{keywordcolor}{rgb}{0.36,0.54,0.66}
+\definecolor{commentcolor}{rgb}{0,0.5,0}
+
+\lstset{
+    backgroundcolor=\color{codegray},
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{keywordcolor}\bfseries,
+    commentstyle=\color{commentcolor}\itshape,
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    frame=single,
+    tabsize=4,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=false,
+    escapeinside={(*@}{@*)}
+}
+
+% -----------------
+% Section spacing
+% -----------------
+\titlespacing*{\subsection}
+  {0pt}
+  {2ex plus 1ex minus .2ex}
+  {0em}
+
+\titlespacing*{\subsubsection}
+  {0pt}
+  {2ex plus 1ex minus .2ex}
+  {0em}
+
+% --------------------------------------------
+% Allow deeper sectioning (up to level 5)
+% --------------------------------------------
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{3}
+
+% --- Define counters for deeper levels ---
+\makeatletter
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand{\thesubsubsubsection}{\thesubsubsection.\arabic{subsubsubsection}}
+
+\newcounter{subsubsubsubsection}[subsubsubsection]
+\renewcommand{\thesubsubsubsubsection}{\thesubsubsubsection.\arabic{subsubsubsubsection}}
+
+% --- Define ToC formatting for new levels ---
+\newcommand{\l@subsubsubsection}{\@dottedtocline{4}{7em}{3em}}
+\newcommand{\l@subsubsubsubsection}{\@dottedtocline{5}{10em}{4em}}
+
+\makeatother
+
+% --- Define visual formatting for deep levels ---
+\newcommand{\subsubsubsection}[1]{%
+  \refstepcounter{subsubsubsection}%
+  \par\vspace{0.5\baselineskip}%
+  \noindent\textbf{\thesubsubsubsection\ #1}\par\vspace{0.25\baselineskip}%
+  \addcontentsline{toc}{subsubsubsection}{\protect\numberline{\thesubsubsubsection}#1}%
+}
+
+\newcommand{\subsubsubsubsection}[1]{%
+  \refstepcounter{subsubsubsubsection}%
+  \par\vspace{0.25\baselineskip}%
+  \noindent\textbf{\thesubsubsubsubsection\ #1}\par\vspace{0.25\baselineskip}%
+  \addcontentsline{toc}{subsubsubsubsection}{\protect\numberline{\thesubsubsubsubsection}#1}%
+}
+
+% -----------------
+% Paragraph spacing
+% -----------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+% -----------------
+% Nomenclature setup
+% -----------------
+\usepackage{nomencl}
+\makenomenclature
+\setlength{\nomlabelwidth}{4.7cm}
+% \renewcommand{\nompreamble}{(The nomenclature must respect the following order: latin symbols, Greek symbols, acronyms. Within each category of symbols, follow alphabetic order. An example is provided below)}
+
+% -----------------
+% Line spacing
+% -----------------
+\onehalfspacing
+
+% -----------------
+% Header/footer setup
+% -----------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Thesis C}
+\fancyhead[R]{Nathan Sivalingam}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{15pt}
+\setlength{\headsep}{25pt}
+
+% Unnumbered subsection that still appears in the ToC
+\newcommand{\subsectiontoc}[1]{%
+  \subsection*{#1}%
+  \addcontentsline{toc}{subsection}{#1}%
+}
+
+% -----------------
+% Document start
+% -----------------
+\begin{document}
+
+% -----------------
+% Title Page
+% -----------------
+\input{Sections/TitlePage.tex}
+\thispagestyle{empty}
+\pagebreak
+
+% -----------------
+% Front Matter
+% -----------------
+\pagenumbering{roman}
+
+\input{Sections/Originality Statement}
+\pagebreak
+\input{Sections/Abstract}
+\pagebreak
+\input{Sections/Acknowledgments}
+\pagebreak
+
+% Reduce ToC spacing
+\setlength{\cftbeforesecskip}{2pt}
+\setlength{\cftbeforesubsecskip}{1pt}
+
+% Table of Contents
+\tableofcontents
+\pagebreak
+
+\cleardoublepage
+\addcontentsline{toc}{section}{List of Figures}
+\listoffigures
+\pagebreak
+
+\cleardoublepage
+\addcontentsline{toc}{section}{List of Tables}
+\listoftables
+\pagebreak
+
+\input{Sections/Nomenclature}
+\pagebreak
+
+% Save the last roman page number
+\newcounter{romanpages}
+\setcounter{romanpages}{\value{page}}
+
+% -----------------
+% Main Matter
+% -----------------
+\pagenumbering{arabic}
+
+\input{Sections/Introduction}
+\pagebreak
+\input{Sections/Literature Review}
+\pagebreak
+\input{Sections/Methodology}
+\pagebreak
+\input{Sections/Results and discussion}
+\input{Sections/Conclusion}
+
+% -----------------
+% Back Matter
+% -----------------
+\clearpage
+\pagenumbering{roman}
+\setcounter{page}{\value{romanpages}}
+
+\cleardoublepage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{ieeetr}
+\bibliography{References}
+
+\input{Sections/Reference Examples}
+
+\newpage
+\input{Sections/Appendix}
+
+\end{document}

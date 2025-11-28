@@ -1,0 +1,557 @@
+\section{Methodology}
+\begin{comment}
+In this section you are expected to present your methodology: the tools you have used and the way in which you have applied them, with proper reference to literature sources when required. This includes both theoretical and experimental methods included in your research. Highlight the main methodological novelty/challenges of your work and try to present your methodology in a clear way, possibly using graphical devices such as flowcharts or block diagrams.
+    
+This section should be indicatively \textbf{~10-15 pages}. Remember to reference properly any material that you obtain from literature or other sources.
+\end{comment}
+\subsection{Overview of Experimentation}
+The aims of this thesis, as outlined in Section 2.6, were addressed using an experimental methodology that builds directly on the work of previous thesis students, whose contributions laid the foundation for this research: Z. Zhou \cite{Zhou2024}, I.R. Chaudhury \cite{Chaudhury2024}, and S. Schiffmann \cite{Schiffmann2023}. The following procedure outlines the approach taken to achieve these aims.
+\begin{enumerate}
+    \renewcommand{\labelenumi}{\Roman{enumi}.}
+    \item Based on experimental testing conducted by Chaudhury et al., an optimal vortex generator shape was selected from five variations: winglet, cube, cylinder, pyramid, and inverted pyramid according to their geometric characteristics and cooling performance under forced convection conditions \cite{Chaudhury2024}. Then, based on the experimental campaign conducted by Zhou et al., an optimal vortex generator spacing configuration was selected from the following options: (25.5 × 79) mm, (51 × 79) mm, (102 × 79) mm, (153 × 79) mm, (204 × 79) mm, (51 × 39.5) mm, (51 × 118.5) mm, (51 × 158) mm, and (51 × 197) mm \cite{Zhou2024}. An explanation of both choices can be found in Section 2.4.2.
+    \item Following the selection of the optimal vortex generator shape and spacing arrangement, the heights to be tested were determined. An explanation for choice of vortex generator heights can be found in Section 3.3.1. These heights, along with the selected shape and spacing, resulted in a configuration previously examined by Chaudhury et al. and Zhou et al. This allowed the replication of their experimental tests and provided a solid foundation for the present study.
+    \item Once previous tests were replicated and any discrepancies between the experimental results of this study and those of past thesis students were explained, vortex generator arrays of varying heights were tested to identify the optimal height for reducing photovoltaic module temperature. The data collected from these tests was then processed using FLIR and MATLAB, to calculate the temperature difference between the vortex generator test case and the existent baseline model. These results were then plotted to show the temperature difference across different vortex generator heights at wind speeds of 1, 2, and 3 m/s.
+\end{enumerate}
+
+\pagebreak
+
+\subsection{Experimental Equipment}
+This section of the report outlines the equipment used in the experimental process and their application.\par
+\textbf{Photovoltaic Module}\par
+To observe the effects of vortex generators on photovoltaic module temperature reduction, a standard photovoltaic module was used during experimentation. The photovoltaic module that was used was the WINAICO Perc Series P6 WST-285P6 PV module \cite{winaico_wst_285p6}, whose properties can be found in Table \ref{tab:pv_module_properties}. Infrared images of the photovoltaic module were captured throughout the experimental testing process and compared to assess temperature variations resulting from the presence of vortex generators.
+\begin{table}[H]
+    \centering
+    \caption{WINAICO Perc Series P6 WST-285P6 PV Module Properties \cite{winaico_wst_285p6}}
+    \begin{tabularx}{\textwidth}{l X} % two columns: property + details
+        \toprule
+        \textbf{Properties} & \textbf{Details} \\
+        \midrule
+        Material & Polycrystalline silicon \\
+        Frame material & Black anodised aluminium \\
+        Dimensions & 1665 mm length, 999 mm width, 35 mm depth \\
+        Cells & Total 60; 10 cells long, 6 cells wide \\
+        Rated power & Total 285 W; 4.75 W per cell \\
+        Open circuit voltage/current & 38.9 V / 9.57 A \\
+        Maximum series fuse & 25 A \\
+        Efficiency rating & 17.13 \% under STP; solar irradiation 1,000 W/m\textsuperscript{2}, light spectrum AM 1.5, operating temperature 25$^\circ$C \\
+        Electricity output decline & Year 1: 3.0 \%, Years 2--25: 0.7 \% \\
+        Temperature coefficient of $P_\text{max}$ & -0.43 \%/$^\circ$C \\
+        Temperature coefficient of $V_\text{oc}$ & -0.33 \%/$^\circ$C \\
+        \bottomrule
+    \end{tabularx}
+    \label{tab:pv_module_properties}
+\end{table}
+
+\textbf{Large Wind Tunnel}\par
+\begin{wrapfigure}{r}{0.55\textwidth}
+    \centering
+    \vspace{-1.35em}
+    \includegraphics[width=0.55\textwidth]{Figures/replace_unsw_LWT.png}
+    \caption{UNSW Large Aerodynamics Wind Tunnel \cite{UNSWFlowNoiseGroup}.}
+    \label{fig:large_wind_tunnel}
+    \vspace{-1em}
+\end{wrapfigure}
+
+The UNSW large aerodynamic wind tunnel (LWT) is a low turbulence, closed return wind tunnel that supports aerodynamic and wind engineering research, shown in Figure \ref{fig:large_wind_tunnel}. The LWT has a small test section with a rectangular cross section measuring 1.22 m in width by 0.91 m in height. Furthermore, the small test section allows an operating flow velocity of 5 to 60 m/s and a low turbulence intensity of 0.1\%. The LWT also has a large test section with a regular octagon cross section. The cross section has a height of 3.05 m, a cross sectional area of 7.70 $\mathrm{m}^2$, and an operating flow velocity of 0.72 to 8.65 m/s. In addition, the large test section of the LWT accommodates hot-wire anemometry, allowing wind speed measurements to be monitored and, when necessary, corrected during testing, resulting in increased accuracy \cite{UNSWFlowNoiseGroup}. Moreover, the large test section of the LWT allows the photovoltaic module (detailed in Table \ref{tab:pv_module_properties}) to be fully enclosed within the wind tunnel during testing, ensuring that the results reflect real-world conditions without interference from tunnel edges, pressure gradients, or incomplete flow interactions. Thus, to simulate forced convection conditions, experimental testing was conducted in the large test section of the LWT.\par
+
+\textbf{Junction Box and DC 1.2 kW Power Supply (QPX1200SP)}\par
+\begin{wrapfigure}{r}{0.35\textwidth}
+    \vspace{-1.25em}
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/junction_box.jpg}
+    \caption{Junction Box \cite{aimtti_qpx1200sp}}
+    \vspace{-0.5em}
+    \label{fig:junction_box}
+\end{wrapfigure}
+
+The junction box (Figure \ref{fig:junction_box}) and 1.2 kW DC power supply were used to heat the photovoltaic module, simulating its operating temperature under sunny outdoor conditions \cite{aimtti_qpx1200sp}. A 2023 study by Y.A. Rahman reported that photovoltaic modules typically reach around 45 \textdegree C in such conditions \cite{Rahman.2023}. To replicate this, the voltage of the DC power supply was initially set to 30 V, allowing current to flow through the junction box before increasing the output to 50 V. Prior error analysis conducted by Zhou et al. indicated that voltage and current delivery errors range from 0.1 to 0.3\% \cite{Zhou2024}. Once the power supply stabilised, the voltage was adjusted to approximately 44 V, which raised the photovoltaic module temperature to approximately 45 \textdegree C.\par
+
+\textbf{Acrylic Sheets To Simulate Roofing}\par
+In practice, photovoltaic modules are typically mounted on roofing. To replicate this configuration, acrylic sheets were positioned directly beneath the module to simulate the roofing structure. The acrylic roofing was divided into three sections to facilitate assembly and disassembly, which was necessary for installing vortex generators on the underside of the photovoltaic module.\par
+
+\textbf{Acrylic Sheets To Facilitate Unidirectional Flow}\par
+To replicate the conditions of a photovoltaic module installed on a household roof, unidirectional airflow was required such that air entering the space between the photovoltaic module and the acrylic roof passed through the vortex generator array before exiting. Allowing airflow to escape laterally from this space would have generated unwanted turbulence, which would compromise the validity of the tests. To prevent this, acrylic side panels were installed on either side of the photovoltaic module to enforce unidirectional flow. The panels incorporated magnetic tape, allowing for easy assembly and disassembly. Moreover, the use of acrylic ensures transparency, which was required for PIV-based experimentation.
+
+\textbf{Support Frame}\par
+The photovoltaic module and acrylic sheets were held in place by an aluminium support frame. The support frame, supplied by MayTec, was assembled to position the photovoltaic module at a 45\textdegree\, angle from the horizontal axis, in accordance with NOCT testing standards \cite{InternationalElectrotechnicalCommission2005}. The support frame was equipped with six wheels, providing enhanced manoeuvrability in the event that a critical component, such as the photovoltaic module, needed to be replaced.\par
+
+\textbf{Hot Wire Anemometer}\par
+\begin{wrapfigure}{r}{0.35\textwidth}
+    \vspace{-5.15em}
+    \centering
+    \includegraphics[width=0.25\textwidth]{Figures/hot_wire_anemometer.png}
+    \caption{Hot Wire Anemometer \cite{Testo_405_NTC}}
+    \vspace{-2em}
+    \label{fig:hot_wire_anemometer}
+\end{wrapfigure}
+
+A hot wire anemometer consists of a small wire heated by an electric current and positioned in the air or gas stream whose velocity is to be measured \cite{ScienceDirectHotWireAnemometer}. This instrument was the primary tool used to determine wind speed due to its accuracy, reliability, and proximity to the photovoltaic module. It was inserted in front of the module through a specially designed opening in the LWT (Figure \ref{fig:hot_wire_anemometer}) to minimise airflow obstruction, enabling wind speed measurements to be taken from outside the wind tunnel.\par
+
+\textbf{Vane Anemometer}\par
+\begin{wrapfigure}{r}{0.35\textwidth}
+    \vspace{-2em}
+    \centering
+    \includegraphics[width=0.20\textwidth]{Figures/vane_anemometer.png}
+    \caption{Vane Anemometer \cite{TSI_LCA501_Vane_Anemometer_TradeIndia}}
+    \label{fig:vane_anemometer}
+\end{wrapfigure}
+
+A vane anemometer measures the average velocity of airflow using rotating vanes, with the rotation speed corresponding to the flow speed. Its accuracy depends on the vane angle relative to the airflow and requires a minimum threshold velocity for operation \cite{ScienceDirectVaneAnemometer}. During testing, it was positioned ahead of the photovoltaic module in a similar manner to the hot wire anemometer but on the opposite side (Figure \ref{fig:vane_anemometer}). The instrument served as a secondary wind speed sensor to prevent a single point of failure during wind speed adjustments.\par
+
+\textbf{Tripod}\par
+\begin{wrapfigure}{r}{0.35\textwidth}
+    \vspace{-4.25em}
+    \centering
+    \includegraphics[width=0.15\textwidth]{Figures/tripod.png}
+    \caption{Tripod \cite{TSI_LCA501_Vane_Anemometer_TradeIndia}}
+    \vspace{-3em}
+    \label{fig:tripod_image}
+\end{wrapfigure}
+A tripod was used to elevate the infrared camera to maintain a perpendicular distance of two metres from the photovoltaic module, as shown in Figure \ref{fig:tripod_image}. This setup followed previous experimental configurations and ensured that the entire photovoltaic module remained within the camera frame.
+
+\textbf{FLIR E95 Thermal Imaging Camera \& Charging Cable}\par
+\begin{wrapfigure}{r}{0.35\textwidth}
+    \vspace{-2.5em}
+    \centering
+    \includegraphics[width=0.20\textwidth]{Figures/flir_e95.png}
+    \caption{FLIR E95 \cite{FLIR_E95}}
+    \label{fig:flir_e95}
+\end{wrapfigure}
+The FLIR E95 infrared camera (Figure \ref{fig:flir_e95}) was used to detect and capture the thermal energy emitted by the photovoltaic module during experimental testing, allowing assessment of the effect of vortex generators on module temperature reduction. The camera had a resolution of 348 × 464 pixels, capturing 161,472 temperature points per image. Thus, thermal images of the photovoltaic module, captured using the FLIR E95 infrared camera, were analysed to assess temperature variations caused by the presence of vortex generators.
+
+\textbf{Zip Ties}\par
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \vspace{-3.6em}
+  \centering
+  \includegraphics[trim=0 120 0 150,clip,width=0.175\textwidth]{Figures/ziptie_charger.png}
+  \caption{Zip Ties}
+  \label{fig:ziptie_charger}
+\end{wrapfigure}
+
+It was discovered through practical experimentation that the battery life of the FLIR infrared camera lasted approximately two hours. Due to the four hour duration of one experimental test, the infrared camera needed to be connected to its charging cable during testing. To prevent cable entanglement and minimise turbulence from the charging cable, zip ties were used to secure it to the tripod, as shown in Figure \ref{fig:ziptie_charger}.\par
+
+\textbf{Masking Tape}\par
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \vspace{-3.45em}
+  \centering
+    \includegraphics[trim=0 0 0 0,clip,width=0.25\textwidth,height=2cm]{Figures/masking_tape_tripod.png}
+  \vspace{-0.5em}
+  \caption{Tripod Placement}
+  \label{fig:masking_tape_tripod}
+\end{wrapfigure}
+
+As detailed in Section 4.1, the tripod position was found to influence the experimental results. To ensure consistent placement across all tests and improve repeatability, masking tape was used to mark and secure the tripod position, as shown in Figure \ref{fig:masking_tape_tripod}.
+
+\textbf{Vortex Generators}\par
+The primary objective of this thesis was to evaluate the effect of vortex generator height on the reduction of photovoltaic module temperature. Thus, an array of vortex generators (Figure \ref{fig:spacing_config}) were positioned on the underside of the photovoltaic module during experimental testing.
+
+\textbf{Blu Tack}\par
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \vspace{-9.95em}
+  \centering
+  \includegraphics[trim=100 150 100 150,clip,width=0.35\textwidth]{Figures/bluetack.png}
+  \vspace{-7.5em}
+  \caption{Vortex generator with Blu Tack applied.}
+  \label{fig:bluetack}
+\end{wrapfigure}
+
+Blu Tack was used to attach the vortex generators to the underside of the photovoltaic module, as shown in Figure \ref{fig:bluetack}. Blu Tack was used instead of permanent adhesives such as hot glue, as it allowed the vortex generators to be repositioned to test different heights on the same photovoltaic module. Blu Tack was also selected over more discreet alternatives, such as sticky tape, as previous thesis students reported adhesion issues with tape that led to vortex generators detaching from the underside of the photovoltaic module during testing.
+
+\textbf{Thermocouples and Resistance-to-digital converter (MAX31865)}\par
+\begin{wrapfigure}{r}{0.40\textwidth}
+  \vspace{-1em}
+  \centering
+  \includegraphics[trim=0 30 0 435,clip,width=0.40\textwidth]{Figures/thermocouple_position.png}
+  \caption{Thermocouple Positions}
+  \label{fig:thermocouple_position}
+\end{wrapfigure}
+K-type thermocouples were used to record the ambient temperature of the LWT and the photovoltaic module during experimental testing, as shown in Figure \ref{fig:thermocouple_position}. The thermocouple used to measure ambient temperature was cross-referenced with the vane and hot-wire anemometer readings, thereby reducing the risk associated with a single point of failure. Similarly, the thermocouple measuring the photovoltaic module temperature was also cross-referenced with the infrared images obtained from the thermal camera to validate accuracy and detect potential sensor errors. The thermocouples were attached using Blu Tack and connected to wires leading to the resistance-to-digital converter (RTD), where the data was digitised and stored on the laptop.
+
+\textbf{Laptop}\par
+\begin{wrapfigure}{r}{0.4\textwidth}
+  \vspace{-1em}
+  \centering
+  \includegraphics[trim=0 0 0 0,clip,width=0.40\textwidth,height=5.5cm]{Figures/coolterm_exe.png}
+  \vspace{-1.8em}
+  \caption{CoolTerm Application}
+  \label{fig:coolterm_exe}
+  \vspace{-2em}
+\end{wrapfigure}
+
+A laptop was used to record the ambient and photovoltaic module temperature readings measured by the thermocouples during the experimental process.
+
+\textbf{CoolTerm}\par
+CoolTerm is a simple serial port terminal application (no terminal emulation) to exchange data with hardware connected to serial ports such as servo controllers, robotic kits, GPS receivers, micro-controllers, etc \cite{CoolTermHelp}. In this experiment, CoolTerm, as shown in Figure \ref{fig:coolterm_exe}, was employed to record the thermocouple temperature readings in real time and to export the collected data as a text file for subsequent analysis and processing.
+
+\textbf{FLIR}\par
+FLIR Tools is a software suite developed by FLIR Systems for working with thermal imaging cameras (infrared cameras). It’s commonly used for analysing and reporting infrared images and videos. FLIR Tools was used to process the infrared images captured during the experiment and export the resulting data as a comma-separated values (CSV) file for MATLAB-based analysis.
+
+\textbf{MATLAB}\par
+MATLAB is a high-performance programming language, software platform, and an interactive environment designed for technical computing, integrating computation, visualisation, and programming \cite{MathWorksIntroMATLAB}. MATLAB was used to analyse the CSV files from FLIR Tools and determine the changes in photovoltaic module temperature caused by the vortex generators.
+
+\subsection{Experimental Method}
+The experimental equipment described in Section 3.2 is illustrated in the experimental rig diagram (Figure \ref{fig:experimental_rig_diagram}). Furthermore, the following subsections provide a detailed description of the experimental method employed in this thesis to fulfil its objectives.\vspace{2em}
+
+\begin{figure}[H]
+    \centering
+    \vspace{-1em}
+    \includegraphics[width=1\linewidth]{Figures/experimental_rig_diagram.pdf}
+    \caption{Diagram of the experimental rig.}
+    \label{fig:experimental_rig_diagram}
+\end{figure}
+
+\subsubsection{Experimental Set-up}
+For each test configuration, the vortex generators must be attached to the underside of the photovoltaic module using Blu Tack. Following this, the three acrylic roof panels should be positioned directly below the photovoltaic module. Additionally, six acrylic side panels must be attached to the experimental rig to create a channel flow environment, with three panels on each side of the photovoltaic module.\par
+
+The DC power supply must be activated to supply a regulated 44 V DC output to the photovoltaic module. Furthermore, both anemometers should be activated to ensure accurate wind speed measurements. Thermocouples should be positioned on both the acrylic roof structure and the photovoltaic module; the thermocouple on the roof records the ambient temperature, while the one on the photovoltaic module measures its temperature. To record thermocouple data to a text file, the CoolTerm.exe application must be properly configured. A complete instruction set to configure the CoolTerm.exe file can be found in Appendix C.1.\par
+
+The tripod-mounted FLIR camera should be positioned to the side of the photovoltaic module, as shown in Figure \ref{fig:side_tripod}, to minimise airflow disruptions over the module surface caused by the tripod. The tripod height should then be adjusted so that it is two metres from the photovoltaic module (Figure \ref{fig:experimental_rig_diagram}) and the entire module is visible to the FLIR camera. The automatic image capture method, set to five-minute intervals, can then be started. This involves taking 60 photos over five hours. The five-hour duration was chosen to accommodate setup and shutdown time before and after the standard four-hour experimental test.\par
+
+Finally, the wind tunnel must be turned on by activating the main switch, isolating switch, booster pump, and start button in that order. Once operational, the vertical wind speed switch should be turned on, and the directional flow dial set to ‘Forward’.
+
+\textbf{Experimental Conditions and Assumptions}\par
+Several assumptions were made during the experimental campaign, including uniform surface emissivity and the negligible influence of Blu Tack on flow and heat transfer characteristics.\par
+
+A uniform emissivity value across the photovoltaic module surface was assumed to simplify radiative heat transfer analysis, as the module’s glass cover exhibits minimal spatial variation in emissivity. This assumption is common in similar experimental studies and has negligible influence on overall thermal performance compared to convective and conductive effects \cite{Chaudhury2024, Zhou2024}.\par
+
+It was assumed that the Blu Tack used to secure the vortex generators to the underside of the panel had a negligible influence on the aerodynamic behaviour and heat transfer characteristics, as its size, placement, and material properties are unlikely to affect the dominant flow or thermal processes \cite{Zhou2024}.
+\newpage
+
+\textbf{Constant Configurations}\par
+\textit{Vortex generator properties}\par
+The vortex generators used in this study were cylindrical structures made from polylactic acid (PLA), each with a diameter of 20 mm, as shown in Figure \ref{fig:vg_heights_diagram}. Cylindrical vortex generators were selected over other geometries based on the experimental findings of Chaudhury et al., who evaluated the effectiveness of cube, cylindrical, pyramid, inverted pyramid, and winglet-shaped vortex generators in reducing photovoltaic module temperatures under forced convection conditions, as detailed in Section 2.4.2 \cite{Chaudhury2024}. As a result, cylindrical vortex generators identical in diameter and material to those used by Chaudhury et al. were adopted in this study. Chaudhury et al.'s results summary can be found in Appendix C.2.
+
+\textit{Vortex generator array spacing configuration}\par
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace{-4.2em}
+    \centering
+\includegraphics[width=\linewidth, trim=0 15 0 17.5, clip]{Figures/spacing_config.pdf}
+    \vspace{-1.5em}
+    \caption{Vortex generator array spacing configuration. $d_x=51$ mm and $d_y = 79$ mm.}
+    \label{fig:spacing_config}
+    \vspace{-1em}
+\end{wrapfigure}
+The vortex generators were mounted on the underside of the photovoltaic module with a uniform span-wise spacing of 51 mm and a stream-wise spacing of 79 mm, as illustrated in Figure \ref{fig:spacing_config}. This spacing configuration was selected based on the experimental results of Zhou et al. As detailed in Section 2.4.2, Zhou et al. investigated the effects of span-wise and stream-wise spacing of cylindrical vortex generators on the reduction of photovoltaic module temperatures \cite{Zhou2024}. Zhou et al.’s results indicated that a vortex generator array with a span-wise spacing of 51 mm and a stream-wise spacing of 79 mm was the most effective in reducing module temperatures under forced convection conditions. Thus, the vortex generator array spacing was set to 51 mm by 79 mm during all experimental testing in this study. Zhou et al.'s results summary can be found in Appendix C.3.
+
+\textit{Wind speed conditions}\par
+Experimental testing was conducted in the large test section of the LWT at wind speeds of 1, 2, and 3 m/s. These speeds were chosen to align with the baseline data recorded by S. Schiffmann \cite{Schiffmann2023}, which allowed the reduction in photovoltaic module temperature to be calculated without the need to conduct additional baseline tests.
+
+\textit{Photovoltaic module specifications}\par
+The perpendicular distance between the photovoltaic module and the acrylic roofing (Figure \ref{fig:experimental_rig_diagram}) was maintained at 150 mm throughout experimental testing. Furthermore, the photovoltaic module's 45\textdegree\, angle of inclination and orientation relative to the direction of airflow was kept constant throughout the experimental campaign.
+
+\textit{Thermal camera calibration parameters}\par
+Calibration parameters, including the emissivity of the photovoltaic module surface, were kept consistent throughout the experimental campaign due to their direct relation to radiative heat transfer, as detailed in Section 2.3.2.
+
+\textit{DC power supply}\par
+Variations in the heating temperature of the photovoltaic module, induced by the DC power supply, between baseline and vortex generator test cases would render the observed temperature reductions attributable to the vortex generators unreliable. Thus, the DC power supply was operated at a constant output of 44.5 volts throughout all baseline and vortex generator experiments to ensure consistency.
+
+\textit{Anemometer placements}\par
+Consistent placement of the anemometers within the large test section of the wind tunnel was necessary to ensure that the photovoltaic module experienced uniform wind speeds across all experiments. Inconsistent placement would have influenced the measured wind speeds for two reasons: the velocity distribution within the wind tunnel is non-uniform, and the anemometers serve as reference instruments for adjusting the airflow velocity during testing.
+
+\textit{Thermocouple placements}\par
+Consistency in thermocouple placement was essential due to its proximity to the photovoltaic module. The elevated temperature of the module, relative to its surroundings as a result of DC power supply heating, can artificially increase the ambient temperature recorded when the thermocouple is positioned too close to the module. Therefore, the thermocouple used to measure ambient temperature was mounted on the acrylic roofing structure at a sufficient distance from the photovoltaic module to minimise thermal interference. To further reduce the risk of inflated ambient temperature readings, the temperature sensors integrated into both anemometers, located at substantial distances from the photovoltaic module while remaining within the wind tunnel, were employed as cross-references throughout all experiments.
+
+\textit{Thermal camera and tripod placement}\par
+As discussed in Section 4.1, variations in the position of the thermal camera and its tripod had a substantial impact on the experimental results. Specifically, when the tripod was placed directly in front of the photovoltaic module (Figure \ref{fig:centred_tripod}), it induced turbulence that lowered the module temperature and artificially increased the calculated temperature reduction. Consequently, the placement of the thermal camera and tripod affected test repeatability, as the measured temperature reductions were significantly smaller when the camera was positioned to the side (Figure \ref{fig:side_tripod}). To eliminate this source of error and ensure repeatability, the tripod and thermal camera were positioned to the side of the photovoltaic module for all experiments. In addition, the tripod leg positions were marked with duct tape to maintain consistent placement across tests, as shown in Figure \ref{fig:masking_tape_tripod}.
+
+
+\textbf{Variable Configurations}\par
+\textit{Vortex generator heights}\par
+The main objective of this thesis was to evaluate the effect of vortex generator height on the temperature reduction of a photovoltaic module. As a result, three vortex generator heights were selected: 15 mm, 75 mm, and 150 mm. The three vortex generators can be observed in Figure \ref{fig:vg_heights_diagram}.\par
+
+The 15 mm height was selected to enable replication of previous experimental test cases conducted by Zhou et al. and Chaudhury et al. during their respective theses. A confirmation of Zhou et al. and Chaudhury et al.'s results would establish confidence in the experimental setup and provide a validated foundation for subsequent testing of the 75 mm vortex generators and the 150 mm vortex generators. Any discrepancies between the current and previous findings would prompt an investigation to identify the source of variation. This process would, in turn, enhance the credibility of the results presented in this report. In addition, such an investigation may also reveal potential limitations in the experimental methodologies employed by Zhou et al. or Chaudhury et al.\par
+
+\begin{wrapfigure}{r}{0.5\linewidth}
+    \vspace{-2em}
+    \centering
+    \includegraphics[width=0.76\linewidth, trim={0 0 0 0.9cm}, clip]{Figures/vg_heights_diagram.pdf}
+    \vspace{-1.60em}
+    \caption{Independent variable for the study: vortex generator heights tested. All dimensions are in mm.}
+    \label{fig:vg_heights_diagram}
+    \vspace{-2em}
+\end{wrapfigure}
+
+The 75 mm and 150 mm vortex generator heights were selected based on the 150 mm perpendicular distance between the acrylic roofing structure and the photovoltaic module. Thus, the 75 mm vortex generators would take up 50\% of this perpendicular distance and the 150 mm vortex generators would take up 100\%. A linear relationship between vortex generator height and photovoltaic module temperature reduction could be adequately characterised using these heights alone. However, if unexpected results were observed, additional vortex generator heights within the 15–150 mm range could be tested to obtain a more comprehensive understanding of the relationship between height and temperature reduction. Thus, to discover a more optimal vortex generator height, additional heights could be tested between these limiting cases.\par
+
+\subsubsection{Experimental Procedure}
+Provided that the experimental setup described in Section 3.3.1 has been completed, the experimental test may proceed.
+
+\textbf{Experimental Test}\par
+For each test configuration, the wind speed dial must be adjusted to maintain an airflow velocity of 1 m/s across the surface of the photovoltaic module for 110 minutes to allow temperature and speed stabilisation. Between 110 and 120 minutes, three thermal images are captured at five-minute intervals using the fixed image capture method. Subsequently, the wind speed is increased to 2 m/s and maintained for 50 minutes, followed by the capture of three thermal images between 50 and 60 minutes. This procedure is then repeated a final time at 3 m/s, with a 50-minute stabilisation period and three thermal images captured during the final 10 minutes. These stabilisation periods were determined by a previous thesis student, S. Schiffmann et al., as shown in Figure \ref{fig:data_acquisition}.
+
+\textbf{System Checks}\par
+Throughout the experimental test, system checks should be conducted to verify the validity of the recorded data. The ambient temperature measured by the thermocouple can be cross-referenced with the ambient temperature readings from both anemometers to ensure validity. Additionally, adjustments made via the wind speed dial can be verified by comparing the wind speed measurements from the two anemometers.
+
+
+\subsubsection{Experimental Shutdown}
+After completing the experimental test phase, the wind tunnel airflow must be gradually reduced to a complete stop (0 m/s) by adjusting the wind speed dial. The directional flow dial should then be set to ‘Stop,’ and the vertical wind speed switch turned off. Following this, the wind tunnel should be powered down by pressing the stop button, then deactivating the booster pump, isolating switch, and main switch in that order. The DC power supply must be turned off to cease heating the photovoltaic module. Additionally, now that it is safe to enter the wind tunnel, the thermal camera’s automatic image capture and both anemometers should be switched off.
+\begin{wrapfigure}{r}{0.5\linewidth}
+    \vspace{0.65em}
+    \centering
+    \includegraphics[width=\linewidth, trim={0 15 0 15}, clip]{Figures/data_acquisition.png}
+    \caption{The data acquisition process depending on temperature stabilisation \cite{Zhou2024}.}
+    \label{fig:data_acquisition}
+    \vspace{-3em}
+\end{wrapfigure}
+Finally, the CoolTerm.exe application can be disconnected, as all necessary data has been recorded and saved to a text file.\par
+
+\subsubsection{Data Acquisition Process}
+Due to the automatic image capture method, the nine thermal images required for data processing should be imported from the FLIR camera using the FLIR Tools mobile application once the experiment is complete. This method records thermal images of the photovoltaic module at five-minute intervals. Consequently, the nine images selected must correspond to the 10 minutes preceding each increase in wind speed, as detailed in Figure \ref{fig:data_acquisition}. Additionally, the CoolTerm text file containing thermocouple data (Figure \ref{fig:coolterm_exe}) is already available on the laptop used during the experimental test.
+
+\subsection{Data Processing}
+To detail the data processing steps observed in Figure \ref{fig:data_processing_overview}, this section uses experimental data from the 15 mm vortex generator experiment conducted on August 12, 2025.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/data_processing_overview.pdf}
+    \caption{An overview of the steps involved in processing experimental data.}
+    \label{fig:data_processing_overview}
+\end{figure}\vspace{-2em}
+\subsubsection{FLIR Processing}
+The nine infrared images captured during the experiment must be imported from the FLIR camera into FLIR Tools. The steps outlined in the following subsections should then be applied to each of these images.\par
+
+\textbf{Emissivity Configuration}\par
+In FLIR Tools, the default emissivity value is set at 0.98. The emissivity value must be changed to 0.89, a value that was obtained by integrating the simulated spectral reflectance curve at a
+normal incident angle over the wavelength range of 7.5 - 14 micrometres (spectral range of the camera) \cite{ZiboZhou2024}, as shown in Table \ref{tab:thermal_image_metadata}.
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.345\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{Figures/IR_12-08-2025_1ms1.jpg}
+        \caption{Thermal Image: $\text{IR\_12-08-2025\_1ms1}$}
+        \label{fig:IR_12-08-2025_1ms1}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.55\textwidth}
+        \centering
+        \vspace{-23.375em}
+        \captionof{table}{Thermal image metadata extracted from FLIR Tools: $\text{IR\_12-08-2025\_1ms1}$}
+        \begin{tabular}{ll}
+            \toprule
+            \textbf{Parameters} & \\
+            \midrule
+            Emissivity & \sout{0.98} 0.89 \\
+            Refl. temp. & \sout{25.0 \textdegree C} 19.8 \textdegree C\\
+            \addlinespace
+
+            \textbf{Text annotations} & \\
+            \midrule
+            Add row & \\
+            \addlinespace
+
+            \textbf{Image Information} & \\
+            \midrule
+            Camera model & FLIR E95 \\
+            Camera serial & 78509326 \\
+            Lens & FOL 10 mm \\
+            IR resolution & 348 x 464 \\
+            File size & 442.7 KB \\
+            Date created & 12/08/2025 12:34:24 PM \\
+            Last modified & 14/08/2025 9:19:26 AM \\
+            \bottomrule
+        \end{tabular}
+        \label{tab:thermal_image_metadata}
+    \end{minipage}
+\end{figure}
+
+\textbf{Reflective Temperature Configuration}\par
+\begin{wraptable}{R}{0.55\textwidth}
+\vspace{-1.7em}
+\centering
+\caption{Thermocouple Reflective Temperature Measurements at 2025-08-12 12:34}
+\begin{tabular}{ll}
+\toprule
+\textbf{Timestamp} & \textbf{Refl. temp. (°C)} \\
+\midrule
+2025-08-12 12:34:01 & 19.89 \\
+2025-08-12 12:34:07 & 19.85 \\
+2025-08-12 12:34:13 & 19.82 \\
+2025-08-12 12:34:18 & 19.82 \\
+2025-08-12 12:34:24 & 19.85 \\
+2025-08-12 12:34:30 & 19.85 \\
+2025-08-12 12:34:36 & 19.82 \\
+2025-08-12 12:34:41 & 19.82 \\
+2025-08-12 12:34:47 & 19.85 \\
+2025-08-12 12:34:53 & 19.89 \\
+2025-08-12 12:34:59 & 19.82 \\
+\bottomrule
+\end{tabular}
+\vspace{-2em}
+\label{tab:timestamp_1234}
+\end{wraptable}
+
+Similar to the default emissivity value, the reflective temperature, which represents the ambient temperature, is arbitrarily set to 25\textdegree C in FLIR Tools, as shown in Table \ref{tab:thermal_image_metadata}. However, this is often not the case, as ambient temperature typically fluctuates throughout the day. Thus, the thermocouple responsible for measuring ambient temperature inside the wind tunnel is used to obtain a more accurate ambient temperature reading.
+
+As observed in Table \ref{tab:timestamp_1234}, the thermocouple logs thermal temperature data at a rate of 10 data sets per minute using CoolTerm. Thus, the average ambient temperature over these 10 data sets can be calculated and used to update the ambient temperature value in FLIR tools.\par
+
+The average ambient temperature was initially calculated manually; however, a MATLAB program was developed during this thesis to allow users to determine the average ambient temperature by entering the corresponding timestamp. This program is provided in Appendix C.4. Using the MATLAB program and the data presented in Table \ref{tab:timestamp_1234}, the average ambient temperature was determined to be 19.8 \textdegree C. The corresponding corrected reflective temperature value is listed in Table \ref{tab:thermal_image_metadata}.\par
+
+\textbf{FLIR Infrared Image to CSV File Conversion}\par
+Before performing the de-warping and photovoltaic module temperature change calculations in MATLAB, the FLIR infrared images must be converted to CSV format, as shown in Figure \ref{fig:export2csv_part1} and Figure \ref{fig:export2csv_part2}.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth, trim=0 70 0 60, clip]{Figures/export2csvPart1.png}
+        \caption{The required parameters that must be checked prior to exporting the IR image as a CSV file.}
+        \label{fig:export2csv_part1}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth, trim=0 70 235 0, clip]{Figures/export2csvPart2.png}
+        \caption{The resultant CSV file that is used in the MATLAB portion of the data processing.}
+        \label{fig:export2csv_part2}
+    \end{minipage}
+\end{figure}
+
+\subsubsection{MATLAB Processing}
+The MATLAB-based processing procedure comprised two programs: \textit{Dewarping.mlx}, which corrected for variations in camera positioning and image distortion, and \textit{new\_deltaT\_multiple\_processing\_v2\_3.m}, which calculated the change in photovoltaic module temperature resulting from the presence of vortex generators.
+
+\textbf{De-warping}\par
+The position of the FLIR camera during thermal image acquisition varies slightly between tests due to the need for assembly and disassembly between trials. To maintain consistency, the tripod position was marked, and adjustments to the tripod gimbal were minimised. Nonetheless, small variations in camera placement were unavoidable. Furthermore, due to the visual perception of extent and the geometry of visual space \cite{Foley2003}, the thermal image of the photovoltaic module is distorted such that the bottom appears larger than the top, resulting in a warped image. Thus, the nine CSV files generated with FLIR Tools must be de-warped to ensure accurate calculation of the change in photovoltaic module temperature. The following steps, performed in the \textit{Dewarping.mlx} MATLAB program, should be applied to each CSV file. This program is provided in Appendix C.5.
+
+\begin{wrapfigure}{r}{0.45\textwidth} 
+  \vspace{-0.85em} % adjust vertical spacing as needed
+  \centering
+  \includegraphics[width=\linewidth]{Figures/dewarp_yellow_graph.png}
+  \vspace{-2em}
+  \caption{Binary image of the gradient graph.}
+  \label{fig:dewarp_yellow_graph}
+  \vspace{-5em}
+\end{wrapfigure}
+
+\textit{1) Read in the logbook in the format of a .mat file}\par
+The appropriate logbook (e.g., vortex\_generator\_logbook.mat, etc.) is read into the MATLAB program to facilitate the storage of the de-warped image.
+
+\textit{2) Load in the new infrared data to be added into the logbook}\par
+
+Once the logbook has been read, the infrared data, now in CSV file format, is loaded into the MATLAB program.
+
+\textit{3) Rotate the infrared image}\par 
+The infrared image is then rotated by 90$^\circ$ to correct for the orientation in which the thermal image was taken during the experiment.\par
+
+\textit{4) Find the edge and corners of the infrared image}\par
+\begin{wrapfigure}{r}{0.45\textwidth} 
+  \vspace{-7.6em} % adjust vertical spacing as needed
+  \centering
+  \includegraphics[width=\linewidth]{Figures/dewarp_thermal_graph.png}
+  \vspace{-2em}
+  \caption{Corner detection result.}
+  \label{fig:dewarp_thermal_graph}
+  \vspace{2em}
+\end{wrapfigure}
+
+After rotating the infrared image, the edges and corners are identified using a sensitivity value adjuster. The gradient of the infrared data is then computed, and noise is removed to provide a clear indication of the photovoltaic module boundary. A binary image of the gradient is subsequently generated, as shown in Figure \ref{fig:dewarp_yellow_graph}, in which the boundary is clearly defined, with any holes filled and small objects removed.
+
+The MATLAB program then detects the corners of the infrared data before de-warping, with the results displayed as red crosses in Figure \ref{fig:dewarp_thermal_graph}. If these red crosses do not coincide with the four corners of the thermal graph, the sensitivity value can be adjusted accordingly.
+
+\begin{wrapfigure}{r}{0.45\textwidth} 
+  \centering
+  \vspace{-8.3em}
+  \includegraphics[width=\linewidth]{Figures/dewarp_data.png}
+  \vspace{-1.7em}
+  \caption{De-warped thermal image.}
+  \label{fig:dewarp_data}
+  \vspace{-6em}
+\end{wrapfigure}
+
+\textit{5) Correct the coordinates of the corners}\par
+If the automatic process fails, the corner coordinates can be manually corrected. A new coordinate is only needed if the automatic process produces inaccurate results; otherwise, leaving the default values in the pop-up window unchanged is sufficient.\par
+
+\textit{6) Create the transformation needed to perform de-warping}\par
+The transformation model is then determined from the edge coordinates of the de-warped data to establish the image size after de-warping. Once obtained, the transformation model is applied to the original image.
+
+\textit{7) De-warp the data}\par
+The data can then be de-warped, as illustrated in Figure \ref{fig:dewarp_data}.\par
+
+\textit{8) Update the data in the i-th row location}\par
+Once the data is de-warped, the data in the i-th row can be updated to include the de-warped results. The entry properties VG\_cases, date, and speed are modified accordingly. The VG\_cases variable specifies which of the nine thermal images is being referenced and the corresponding vortex generator configuration (e.g., 1\_h15 denotes the first thermal image for a test with 15 mm vortex generators). The date variable is set to the date of the experimental test (e.g., 12/08/2025), while the speed variable records the wind speed at which the thermal image was acquired (e.g., 1 indicates 1 m/s).\par
+
+\textit{9) Update the result into the logbook file}\par
+Finally, the logbook that was initially imported is updated to incorporate the de-warped image data.
+
+\textbf{Photovoltaic Module Temperature Change Calculation}\par
+Once all nine CSV files have been de-warped, the MATLAB program \textit{new\_deltaT\_multiple\_processing\_v2\_3.m} can be run. The program is included in Appendix C.6, and the steps involved are outlined below:
+
+\textit{1) Load in the appropriate vortex generator logbook}\par
+\begin{comment}
+\begin{wrapfigure}{r}{0.45\textwidth}
+    \vspace{-4em}
+    \centering
+    \includegraphics[width=0.725\linewidth]{Figures/deltaT_logbook_rows.png}
+    \caption{Start and end row input prompt.}
+    \label{fig:deltaT_logbook_rows}
+    \vspace{-5em}
+\end{wrapfigure}
+\end{comment}
+To access the de-warped thermal images, the appropriate vortex generator logbook must be read into the program.\par
+
+\textit{2) Choose the appropriate rows from the logbook that are to be evaluated}\par
+From the logbook, the start and end rows are entered into the prompt (Figure \ref{fig:area_of_interest_start_end_row_popup}).
+
+\textit{3) Select corners of the area of interest}\par
+After selecting the appropriate rows from the logbook, the user specifies the corners of the area of interest.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.20\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Figures/area_of_interest_start_end_row_popup.png}
+        \caption{MATLAB prompt for row and column input defining the area of interest.}
+        \label{fig:area_of_interest_start_end_row_popup}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.76\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Figures/area_of_interest.pdf}
+        \caption{Highlighted area shows the area of interest (r3–4, c5–7) defined by the program.}
+        \label{fig:area_of_interest}
+    \end{subfigure}
+    \caption{User input and resulting area of interest as defined in the MATLAB program. Adapted from \cite{Zhou2024}.}
+    \label{fig:area_of_interest_combined}
+    \vspace{-1.5em}
+\end{figure}
+
+In this study, the area of interest is defined between rows 3–4 and columns 5–7 (Figure \ref{fig:area_of_interest}), as identified by PhD Candidate Matthew Deng et al., to account for the edge effect. The edge effect refers to the non-uniform thermal behaviour that occurs near the boundaries of the photovoltaic module, where airflow and heat transfer differ from the central region due to the formation of boundary layers. To ensure consistent analysis, only the middle cells, representative of the module’s bulk thermal response, were considered.
+
+\textit{3) Load in the baseline logbook}\par
+Once the area of interest is defined, the corresponding baseline logbook is read into the MATLAB program. The baseline logbook and ambient temperature parameter are processed using the \textit{correlation\_multiple\_processing\_v2.m} MATLAB program to compute cell temperatures within the area of interest. The result of these calculations is an approximate temperature for each of the six photovoltaic cells under identical ambient temperature conditions, but without the influence of vortex generators. These approximations were possible through the previous conduction of baseline measurements by previous thesis students across a range of ambient temperatures, as shown in Figure~\ref{fig:baseline_trendline}. The \textit{correlation\_multiple\_processing\_v2.m} MATLAB program can be found in Appendix C.7.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.475\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Figures/baseline_trendline.pdf}
+        \caption{Baseline trend lines for photovoltaic temperature in the area of interest without vortex generators, for ambient temperatures of $20$--$32\ ^\circ$C at 1 m/s, 2 m/s, and 3 m/s wind speeds.}
+        \label{fig:baseline_trendline}
+    \end{minipage}\hfill
+    \begin{minipage}{0.485\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Figures/deltaT_graphic_illustration.pdf}
+        \caption{A graphical representation of the temperature difference, $\Delta T$, between photovoltaic cells without vortex generators and those with vortex generators, under the same ambient temperature.}
+        \label{fig:deltaT_graphic_illustration}
+    \end{minipage}
+    \vspace{-1em}
+\end{figure}
+
+\textit{4) Calculate Delta T}\par
+For each photovoltaic cell within the area of interest, $\Delta T$ represents the temperature difference between the baseline case and the vortex generator case. A graphic illustration of this calculation is shown in Figure \ref{fig:deltaT_graphic_illustration}.\par
+
+\begin{figure}[H]
+    \vspace{-1em}
+    \centering
+    \includegraphics[width=1\linewidth]{Figures/pv_cell_calculations.pdf}
+    \vspace{-2em}
+    \caption{Illustration of the $2\times3$ cell arrays showing photovoltaic temperatures for the baseline, vortex generator, and resulting temperature difference ($\Delta T$) calculated using \textit{new\_deltaT\_multiple\_processing\_v2\_3.m}.}
+    \label{fig:pv_cell_calculations}
+    \vspace{-1em}
+\end{figure}
+
+The temperatures of the six photovoltaic cells within the area of interest for the baseline case are stored in a $2\times3$ array. Similarly, the temperatures of the same cells for the vortex generator case are stored in array. The MATLAB program \textit{new\_deltaT\_multiple\_processing\_v2\_3.m} then computes the temperature difference for each cell, resulting in a $2\times3$ array. These three $2 \times 3$ arrays can be observed in Figure \ref{fig:pv_cell_calculations}.
+
+An average of this array is calculated to yield a single value representing the effect of vortex generators on the module's temperature. It is important to note that a positive $\Delta T$ indicates cooling by the vortex generators, while a negative $\Delta T$ indicates heating.
+
+\begin{equation*}
+    \Delta T=\frac{\sum (T_{mod,baseline}-T_{mod,vg})}{6}=\frac{-1.42-0.98-0.60-2.16-1.23-0.48}{6}=-1.145\ ^\circ \mathrm{C}
+\end{equation*}
