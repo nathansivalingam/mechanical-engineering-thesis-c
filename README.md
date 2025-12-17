@@ -82,34 +82,36 @@ Photovoltaic modules play a central role in meeting the growing global demand fo
 
 ## 📁 Repository Structure
 ```
-thesis/
-├── README.md                          # This file
-├── thesis_document.pdf                # Full thesis document
-├── latex/
-│   ├── main.tex                       # Main LaTeX file
-│   ├── chapters/                      # Chapter source files
-│   │   ├── introduction.tex
-│   │   ├── literature_review.tex
-│   │   ├── methodology.tex
-│   │   ├── results.tex
-│   │   └── conclusion.tex
-│   ├── appendices/                    # Appendix source files
-│   └── bibliography.bib               # References
-├── data/
-│   ├── baseline/                      # Baseline test data
-│   ├── vortex_generators/             # VG test data (15mm, 75mm, 150mm)
-│   └── thermal_images/                # FLIR infrared images
-├── matlab/
-│   ├── Dewarping.mlx                  # Image de-warping script
-│   ├── new_deltaT_multiple_processing_v2_3.m
-│   ├── correlation_multiple_processing_v2.m
-│   └── average_ambient_temp.m         # Temperature calculation
-├── cfd/
-│   └── flow_simulations/              # CFD analysis files
-└── figures/
-    ├── experimental_setup/            # Rig diagrams and photos
-    ├── results/                       # Result graphs and plots
-    └── literature/                    # Literature review figures
+mechanical-engineering-thesis-c/
+├── README.md                              # This file
+├── References.bib                         # Bibliography references
+├── main.tex                               # Main LaTeX compilation file
+├── z5359644_thesis_c.pdf                  # Compiled thesis document
+│
+├── Figures/                               # All figures and images
+│   ├── experimental_setup/                # Rig diagrams and photos
+│   ├── results/                           # Result graphs and plots
+│   └── literature/                        # Literature review figures
+│
+├── MATLAB/                                # MATLAB processing scripts
+│   ├── average_ambient_temperature_function.m
+│   ├── correlationmultipleprocessing.m
+│   ├── dewarping.m
+│   └── newdeltaTmultipleprocessingv23.m
+│
+└── Sections/                              # LaTeX chapter files
+    ├── Abstract.tex
+    ├── Acknowledgments.tex
+    ├── Appendix.tex
+    ├── Conclusion.tex
+    ├── Introduction.tex
+    ├── Literature Review.tex
+    ├── Methodology.tex
+    ├── Nomenclature.tex
+    ├── Originality Statement.tex
+    ├── Reference Examples.tex
+    ├── Results and discussion.tex
+    └── TitlePage.tex
 ```
 
 ---
