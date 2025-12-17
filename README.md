@@ -14,7 +14,7 @@ This repository contains the LaTeX source files, figures, and MATLAB processing 
 
 ---
 
-## 📋 Abstract
+## Abstract
 
 Photovoltaic modules play a central role in meeting the growing global demand for renewable energy, yet their electrical efficiency declines as operating temperature rises. This thesis investigates the height-dependent effects of cylindrical vortex generators on photovoltaic module temperature reduction under forced convection conditions.
 
@@ -26,7 +26,7 @@ Photovoltaic modules play a central role in meeting the growing global demand fo
 
 ---
 
-## 🎯 Research Objectives
+## Research Objectives
 
 1. Confirm existing results on cylindrical vortex generators' ability to reduce PV module temperature
 2. Identify optimal vortex generator height for maximum temperature reduction
@@ -34,7 +34,7 @@ Photovoltaic modules play a central role in meeting the growing global demand fo
 
 ---
 
-## 🔬 Methodology
+## Methodology
 
 ### Experimental Setup
 - **Location:** UNSW Large Aerodynamics Wind Tunnel
@@ -58,7 +58,7 @@ Photovoltaic modules play a central role in meeting the growing global demand fo
 
 ---
 
-## 📊 Key Results
+## Key Results
 
 ### 1. Tripod Positioning Effect
 - Central tripod placement created **artificial cooling** via Kármán vortices
@@ -80,7 +80,7 @@ Photovoltaic modules play a central role in meeting the growing global demand fo
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 ```
 mechanical-engineering-thesis-c/
 ├── README.md                              # This file
@@ -116,7 +116,7 @@ mechanical-engineering-thesis-c/
 
 ---
 
-## 🔧 Installation & Usage
+## Installation & Usage
 
 ### Prerequisites
 ```bash
@@ -172,7 +172,7 @@ Line 2: ΔT = +0.36°C (cooling)
 
 ---
 
-## 📈 Energy Balance Analysis
+## Energy Balance Analysis
 
 The research employed comprehensive energy balance equations:
 ```
@@ -205,7 +205,7 @@ Q_in = Q_conv,top + Q_conv,bottom + Q_rad,top + Q_rad,bottom + Q_cond,array
 
 ---
 
-## 📚 Citation
+## Citation
 
 If you use this research, please cite:
 ```bibtex
@@ -223,7 +223,7 @@ If you use this research, please cite:
 
 ---
 
-## 🔮 Future Work
+## Future Work
 
 ### Recommended Extensions
 
@@ -235,21 +235,21 @@ If you use this research, please cite:
 
 ---
 
-## ⚠️ Safety & Risk Assessment
+## Safety & Risk Assessment
 
 All experimental work conducted under UNSW safety protocols:
 
-- ✅ Aerodynamics Lab Induction completed
-- ✅ MME HSE Orientation & Quiz
-- ✅ Hazardous Chemicals Course
-- ✅ Lab Health & Safety Course
-- ✅ Safety@UNSW Course
+- Aerodynamics Lab Induction completed
+- MME HSE Orientation & Quiz
+- Hazardous Chemicals Course
+- Lab Health & Safety Course
+- Safety@UNSW Course
 
 **Risk Level:** Medium - See Appendix E for full risk assessment.
 
 ---
 
-## 🤝 Acknowledgments
+## Acknowledgments
 
 - **Dr Charitha de Silva** - Exceptional guidance and mentorship
 - **Matthew Deng** - Weekend testing, troubleshooting, and CFD analysis
@@ -258,7 +258,7 @@ All experimental work conducted under UNSW safety protocols:
 
 ---
 
-## 📞 Contact
+## Contact
 
 **Nathan Sivalingam**  
 - Email: z5359644@unsw.edu.au
@@ -267,7 +267,7 @@ All experimental work conducted under UNSW safety protocols:
 
 ---
 
-## 📄 License
+## License
 
 This thesis is submitted as a requirement for the degree of Bachelor of Engineering in Mechanical Engineering at UNSW Sydney. All rights reserved.
 
