@@ -54,7 +54,7 @@ Photovoltaic modules play a central role in meeting the growing global demand fo
 ### Data Processing
 - **FLIR Tools:** IR image processing and CSV export
 - **MATLAB:** Image de-warping and temperature analysis
-- **CFD Analysis:** Flow visualization and validation
+- **CFD Analysis:** Flow visualisation and validation
 
 ---
 
@@ -188,7 +188,7 @@ Q_in = Q_conv,top + Q_conv,bottom + Q_rad,top + Q_rad,bottom + Q_cond,array
 
 ---
 
-## 🎓 Academic Context
+## Academic Context
 
 ### Building on Previous Work
 
